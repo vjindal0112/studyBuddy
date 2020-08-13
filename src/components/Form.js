@@ -62,6 +62,7 @@ const ProgressBar = styled.div`
   }
 `;
 
+
 export default function Form() {
   const [index, setIndex] = useState(0);
   const onClick = useCallback(() => setIndex((state) => (state + 1) % 3), []);
@@ -70,6 +71,24 @@ export default function Form() {
     enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
     leave: { opacity: 0, transform: "translate3d(0,-50%,0)" },
   });
+
+  function pushToSheets() {
+    const submission = {
+      name: "Varun",
+      email: "vjindal0112@gmail.com"
+    };
+    var data = new FormData();
+    for (var key in submission) {
+      data.append(key, submission[key]);
+    }
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
+      { method: "POST", body: data }
+    )
+
+  }
+
   return (
     <>
       <ProgressBar>
@@ -84,6 +103,7 @@ export default function Form() {
         onKeyDown={(e) => {
           if (e.key == "Enter") {
             onClick();
+            pushToSheets();
           }
         }}
       >
