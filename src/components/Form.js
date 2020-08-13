@@ -15,8 +15,7 @@ const InputWrapper = styled.div`
 const FormWrapper = styled.div`
   width: 100%;
   height: 100%;
-
-`
+`;
 
 const styleDiv = {
   width: "80%",
@@ -62,7 +61,7 @@ const ProgressBar = styled.div`
   }
 `;
 
-export default function Form() {
+export default function FormFunc() {
   const [index, setIndex] = useState(0);
   const onClick = useCallback(() => setIndex((state) => (state + 1) % 3), []);
   const transitions = useTransition(index, (p) => p, {
