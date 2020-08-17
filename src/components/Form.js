@@ -99,11 +99,9 @@ export default function Form() {
         />
       </ProgressBar>
       <FormWrapper
-        className="simple-trans-main"
         onKeyDown={(e) => {
           if (e.key == "Enter") {
             onClick();
-            pushToSheets();
           }
         }}
       >

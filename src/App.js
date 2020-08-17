@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import FormPage from "./components/form1";
 import styled from "styled-components";
-import Form from "./components/Form";
+import FullPage from "./components/FullPage";
 
 const App = () => {
   return (
     <div className="App">
-      <Form />
+      <FullPage />
     </div>
   );
 };
