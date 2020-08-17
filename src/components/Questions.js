@@ -6,12 +6,10 @@ import styled from 'styled-components'
 
 const Input = styled.input`
   padding: 10px;
-
 `
 
 const Button = styled.button`
   padding: 10px;
-
 `
 
 const Icon = styled.i`
@@ -26,7 +24,7 @@ export default function Questions({
   submitBtnHandler,
   location
 }) {
-  const [value, setValue] = useState({
+const [value, setValue] = useState({
   });
 
   useEffect(() => {
@@ -38,7 +36,7 @@ export default function Questions({
   const clickHandler = (link, i) => {
     console.log(i);
     console.log(location);
-    location.href = `#${link}`;
+    window.location.href = `#${link}`;
     setTimeout(() => {
       document.getElementById(i.toString()).focus();
     }, 1100);
@@ -82,6 +80,7 @@ export default function Questions({
           inputHandler
         }
       />
+
       <br />
       {
         isSubmit ?
