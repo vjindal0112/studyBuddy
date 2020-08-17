@@ -178,11 +178,9 @@ export default function Form() {
       </Wrapper>
 
       <FormWrapper
-        className="simple-trans-main"
-        key="formWrapper"
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            // onClick();
+          if (e.key == "Enter") {
+            onClick();
           }
         }}
       >
