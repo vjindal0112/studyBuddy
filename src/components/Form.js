@@ -53,97 +53,37 @@ const Form = () => {
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section">
-              <p>To start off, what's your full name?</p>
+            <Question
+              title="To start off, what's your full name?"
+              label="Full Name"
+              keyName="name"
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+            <Question
+              title="What's your email"
+              label="Email"
+              keyName="email"
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
 
-              <MDBWrapper>
-                <MDBInput
-                  style={{ color: "#fafafa" }}
-                  key="name"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      fullpageApi.moveSectionDown();
-                    }
-                  }}
-                  onChange={(e) => {
-                    onChangeListener("name", e.target.value);
-                  }}
-                  value={data["name"]}
-                  label="Full Name"
-                />
-              </MDBWrapper>
+            <Question
+              title="What's your time zone"
+              label="Time Zone"
+              keyName="time_zone"
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
 
-              <Button onClick={() => fullpageApi.moveSectionDown()}>Ok</Button>
-            </div>
-
-            <div className="section">
-              <p>What's your email?</p>
-
-              <MDBWrapper>
-                <MDBInput
-                  style={{ color: "#fafafa" }}
-                  key="email"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      fullpageApi.moveSectionDown();
-                    }
-                  }}
-                  onChange={(e) => {
-                    onChangeListener("email", e.target.value);
-                  }}
-                  value={data["email"]}
-                  label="Email"
-                />
-              </MDBWrapper>
-
-              <Button onClick={() => fullpageApi.moveSectionDown()}>Ok</Button>
-            </div>
-
-            <div className="section">
-              <p>What's your country?</p>
-
-              <MDBWrapper>
-                <MDBInput
-                  style={{ color: "#fafafa" }}
-                  key="country"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      fullpageApi.moveSectionDown();
-                    }
-                  }}
-                  onChange={(e) => {
-                    onChangeListener("country", e.target.value);
-                  }}
-                  value={data["country"]}
-                  label="Country"
-                />
-              </MDBWrapper>
-
-              <Button onClick={() => fullpageApi.moveSectionDown()}>Ok</Button>
-            </div>
-
-            <div className="section">
-              <p>Stuff?</p>
-
-              <MDBWrapper>
-                <MDBInput
-                  style={{ color: "#fafafa" }}
-                  key="stuff"
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      fullpageApi.moveSectionDown();
-                    }
-                  }}
-                  onChange={(e) => {
-                    onChangeListener("stuff", e.target.value);
-                  }}
-                  value={data["stuff"]}
-                  label="Stuff"
-                />
-              </MDBWrapper>
-
-              <Button onClick={() => pushToSheets()}>Submit</Button>
-            </div>
+            <Question
+              title="Stuff?"
+              label="Stuff"
+              keyName="stuff"
+              moveSectionDown={pushToSheets}
+              onChange={onChangeListener}
+              submit={true}
+            />
           </ReactFullpage.Wrapper>
         );
       }}

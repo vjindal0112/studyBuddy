@@ -25,39 +25,44 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-const Question = ({ key, fullpageApi, onChange }) => {
+const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) => {
   const [value, setValue] = useState("");
 
-  useEffect(() => {}, [key]);
+  useEffect(() => {}, [keyName]);
 
   return (
-    <>
-      {key && (
-        <div className="section">
-          <p>{key}</p>
+    <div className="section">
+      <p>{title}</p>
 
-          <MDBWrapper>
-            <MDBInput
-              style={{ color: "#fafafa" }}
-              key={key}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  fullpageApi.moveSectionDown();
-                }
-              }}
-              onChange={(e) => {
-                setValue(e.target.value);
-                onChange(key, e.target.value);
-              }}
-              value={value}
-              label={key}
-            />
-          </MDBWrapper>
+      <MDBWrapper>
+        <MDBInput
+          style={{ color: "#fafafa" }}
+          key={keyName}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              moveSectionDown();
+              if(submit) {
+                alert("Thank you!");
+              }
+            }
+          }}
+          onChange={(e) => {
+            setValue(e.target.value);
+            onChange(keyName, e.target.value);
+          }}
+          value={value}
+          label={label}
+        />
+      </MDBWrapper>
 
-          <Button onClick={() => fullpageApi.moveSectionDown()}>Ok</Button>
-        </div>
-      )}
-    </>
+      <Button onClick={() => {
+        moveSectionDown();
+        if(submit) {
+          alert("Thank you!");
+        }
+      }
+        }>{submit ? "Submit" : "Ok"}</Button>
+    </div>
   );
 };
 
