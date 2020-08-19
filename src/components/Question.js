@@ -41,9 +41,6 @@ const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) 
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               moveSectionDown();
-              if(submit) {
-                alert("Thank you!");
-              }
             }
           }}
           onChange={(e) => {
@@ -57,9 +54,6 @@ const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) 
 
       <Button onClick={() => {
         moveSectionDown();
-        if(submit) {
-          alert("Thank you!");
-        }
       }
         }>{submit ? "Submit" : "Ok"}</Button>
     </div>
