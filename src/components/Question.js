@@ -25,7 +25,14 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) => {
+const Question = ({
+  title,
+  label,
+  keyName,
+  moveSectionDown,
+  onChange,
+  submit,
+}) => {
   const [value, setValue] = useState("");
 
   useEffect(() => {}, [keyName]);
@@ -41,7 +48,7 @@ const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) 
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               moveSectionDown();
-              if(submit) {
+              if (submit) {
                 alert("Thank you!");
               }
             }
@@ -55,13 +62,16 @@ const Question = ({ title, label, keyName, moveSectionDown, onChange, submit }) 
         />
       </MDBWrapper>
 
-      <Button onClick={() => {
-        moveSectionDown();
-        if(submit) {
-          alert("Thank you!");
-        }
-      }
-        }>{submit ? "Submit" : "Ok"}</Button>
+      <Button
+        onClick={() => {
+          moveSectionDown();
+          if (submit) {
+            alert("Thank you!");
+          }
+        }}
+      >
+        {submit ? "Submit" : "Ok"}
+      </Button>
     </div>
   );
 };

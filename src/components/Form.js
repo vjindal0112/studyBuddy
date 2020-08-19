@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 import styled from "styled-components";
-import Question from "./Question.js";
 
 const MDBWrapper = styled.div`
   margin: 10px auto;
@@ -60,6 +59,7 @@ const Form = () => {
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
+
             <Question
               title="What's your email"
               label="Email"
