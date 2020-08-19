@@ -3,15 +3,18 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import App from "./App";
-import Home from "./Home";
-import Submitted from "./Submitted";
+import Submitted from "./pages/Submitted";
 import * as serviceWorker from "./serviceWorker";
+import FormPage from "./pages/FormPage";
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 
 const routing = (
   <Router>
     <Switch>
       <Route exact path="/" component={App} />
-      <Route path="/home" component={Home} />
+      <Route path="/form" component={FormPage} />
       <Route path="/submitted" component={Submitted} />
     </Switch>
   </Router>
