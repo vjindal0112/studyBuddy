@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 import styled from "styled-components";
-import Question from "./Question.js";
+import Question from "./Question";
 import { withRouter } from "react-router-dom";
+import SelectBar from "./SelectBar";
 
 const MDBWrapper = styled.div`
   margin: 10px auto;
@@ -59,6 +58,13 @@ const Form = ({ history }) => {
               title="To start off, what's your full name?"
               label="Full Name"
               keyName="name"
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+            <SelectBar
+              title="What class are you in?"
+              label="Class"
+              keyName="class"
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />

@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import ReactFullpage from "@fullpage/react-fullpage";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 import styled from "styled-components";
 
 const MDBWrapper = styled.div`

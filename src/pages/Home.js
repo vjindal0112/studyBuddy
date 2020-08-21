@@ -23,11 +23,10 @@ const Logo = styled.img`
 `;
 
 const Section = styled.section`
-  height: ${props => props.height};
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   color: #333;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${(props) => props.backgroundColor};
 `;
 
 const TextDiv = styled.div`
@@ -45,9 +44,9 @@ export default function Home() {
         <Heading>UMich Study Buddy</Heading>
         <Button href="/form">Find Your Buddy</Button>
       </div>
-      <Section height="40vh" backgroundColor="#fefefe">
+      <Section backgroundColor="#fefefe">
         <TextDiv>
-          <h1 style={{textAlign: "center", marginTop: "50px" }}>What is this?</h1>
+          <h1 style={{ textAlign: "center" }}>What is this?</h1>
           <p>
             Everyone knows that the worst way to study is alone. If you have a
             question it's infinitely easier to find an answer when you have a
@@ -55,22 +54,27 @@ export default function Home() {
           </p>
           <p>
             We created this because while attending Zoom University it is
-            impossible to make a friend in classes since Bob is shoving his
-            face with crumb cakes with his video off during class.
+            impossible to make a friend in classes since Bob is shoving his face
+            with crumb cakes with his video off during class.
           </p>
         </TextDiv>
       </Section>
-      <Section height="60vh" backgroundColor="#f2f2f2">
+      <Section backgroundColor="#f2f2f2">
         <TextDiv>
-          <h1 style={{textAlign: "center", marginTop: "50px" }}>How does it work?</h1>
+          <h1 style={{ textAlign: "center" }}>How does it work?</h1>
           <p>
-            Once you complete the form (enter your class and some of your study habits), we will let you know your Study Buddy by September 8th.
+            Once you complete the form (enter your class and some of your study
+            habits), we will let you know your Study Buddy by September 8th.
           </p>
           <p>
-            We know that it's pretty hard to study with someone who you aren't friends with so we have also included a few personality questions. We will use this data to match you up so that you can get some As together.
+            We know that it's pretty hard to study with someone who you aren't
+            friends with so we have also included a few personality questions.
+            We will use this data to match you up so that you can get some As
+            together.
           </p>
           <p>
-            All of this data will be completely anonymized and private, so you have nothing to worry about.
+            All of this data will be completely anonymized and private, so you
+            have nothing to worry about.
           </p>
         </TextDiv>
       </Section>
