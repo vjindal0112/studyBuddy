@@ -4,6 +4,7 @@ import "./index.css";
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom'
 import App from "./App";
 import Submitted from "./pages/Submitted";
+import Home from "./pages/Home"
 import * as serviceWorker from "./serviceWorker";
 import FormPage from "./pages/FormPage";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -16,6 +17,7 @@ const routing = (
       <Route exact path="/" component={App} />
       <Route path="/form" component={FormPage} />
       <Route path="/submitted" component={Submitted} />
+      <Route path="/home" component={Home} />
     </Switch>
   </Router>
 );

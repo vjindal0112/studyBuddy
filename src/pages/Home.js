@@ -1,9 +1,29 @@
 import React from 'react'
+import styled from 'styled-components';
+
+const Button = styled.a`
+  border: 4px solid #FFCB05;
+  padding: 12px;
+  margin: 24px;
+  color: #fafafa;
+
+  transition: all .5s;
+  &:hover {
+    background-color: #FFCB05;
+  }
+
+`;
+
+const Heading = styled.h1`
+  font-size: 60px;
+
+`;
 
 export default function Home() {
   return (
-    <div className="App">
-      <h1>Home</h1>
+    <div className="App" style={{height: "80vh", minHeight: "80vh"}}>
+      <Heading>UMich Study Buddy</Heading>
+      <Button href="/form">Find Your Buddy</Button>
     </div>
   )
 }

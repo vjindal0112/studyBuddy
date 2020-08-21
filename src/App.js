@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="App">
-      <Form />
-    </div>
+      <Home />
   );
 };
 
