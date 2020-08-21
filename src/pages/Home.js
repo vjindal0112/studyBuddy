@@ -16,10 +16,15 @@ const Button = styled.a`
 
 const Heading = styled.h1`
   font-size: 60px;
+  @media(max-width: 768px) {
+    font-size: 40px;
+  }
+  padding: 10px;
 `;
 
 const Logo = styled.img`
-  max-width: 300px;
+  max-height: 40vh;
+  margin-top: 30px;
 `;
 
 const Section = styled.section`
