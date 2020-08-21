@@ -90,7 +90,7 @@ const Question = ({
           moveSectionDown();
         }}
       >
-        {submit ? "Submit" : "Ok"}
+        {submit ? "Submit" : "Enter"}
       </Button>
     </div>
   );
