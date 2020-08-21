@@ -25,6 +25,33 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
+const Input = styled.input`
+  color: #fafafa;
+  font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-bottom: 1px solid pink;
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d5d5d5;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #d5d5d5;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #d5d5d5;
+  }
+`;
+
 const Question = ({
   title,
   label,
@@ -41,8 +68,8 @@ const Question = ({
     <div className="section">
       <p>{title}</p>
       <MDBWrapper>
-        <MDBInput
-          style={{ color: "#fafafa" }}
+        <Input
+          style={{ color: "#fafafa", outline: "#fafafa" }}
           key={keyName}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
@@ -54,7 +81,7 @@ const Question = ({
             onChange(keyName, e.target.value);
           }}
           value={value}
-          label={label}
+          placeholder={label}
         />
       </MDBWrapper>
 
