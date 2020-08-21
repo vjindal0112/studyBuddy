@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 import styled from "styled-components";
+import Question from "./Question.js";
+import { withRouter } from "react-router-dom";
 
 const MDBWrapper = styled.div`
   margin: 10px auto;
@@ -25,7 +27,7 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-const Form = () => {
+const Form = ({ history }) => {
   const [data, setData] = useState({});
 
   function pushToSheets() {
@@ -39,6 +41,7 @@ const Form = () => {
       "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
       { method: "POST", body: formData }
     );
+    history.push("/submitted");
   }
 
   function onChangeListener(key, value) {
@@ -91,4 +94,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default withRouter(Form);

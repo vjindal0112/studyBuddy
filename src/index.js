@@ -6,8 +6,8 @@ import App from "./App";
 import Submitted from "./pages/Submitted";
 import * as serviceWorker from "./serviceWorker";
 import FormPage from "./pages/FormPage";
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 const routing = (

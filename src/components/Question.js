@@ -40,7 +40,6 @@ const Question = ({
   return (
     <div className="section">
       <p>{title}</p>
-
       <MDBWrapper>
         <MDBInput
           style={{ color: "#fafafa" }}
@@ -48,9 +47,6 @@ const Question = ({
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               moveSectionDown();
-              if (submit) {
-                alert("Thank you!");
-              }
             }
           }}
           onChange={(e) => {
@@ -65,9 +61,6 @@ const Question = ({
       <Button
         onClick={() => {
           moveSectionDown();
-          if (submit) {
-            alert("Thank you!");
-          }
         }}
       >
         {submit ? "Submit" : "Ok"}
