@@ -34,9 +34,11 @@ const Wrapper= styled.div`
 `
 
 const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(2);
 
-  useEffect(() => {}, [keyName]);
+  useEffect(() => {
+    onChange(keyName, value);
+  }, [keyName]);
 
   return (
     <div className="section">
