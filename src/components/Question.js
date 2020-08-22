@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-const MDBWrapper = styled.div`
+const Wrapper = styled.div`
   margin: 10px auto;
   width: 40%;
   color: #fafafa !important;
@@ -64,7 +64,7 @@ const Question = ({
   return (
     <div className="section">
       <p>{title}</p>
-      <MDBWrapper>
+    <Wrapper>
         <Input
           style={{ color: "#fafafa", outline: "#fafafa" }}
           key={keyName}
@@ -80,7 +80,7 @@ const Question = ({
           value={value}
           placeholder={label}
         />
-      </MDBWrapper>
+      </Wrapper>
 
       <Button
         onClick={() => {

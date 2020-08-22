@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Select from "react-select";
 
@@ -33,7 +33,6 @@ const customStyles = {
 }
 
 const SelectBar = ({ title, label, keyName, moveSectionDown, onChange }) => {
-  const [value, setValue] = useState("");
 
   useEffect(() => {}, [keyName]);
 

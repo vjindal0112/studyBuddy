@@ -1,31 +1,9 @@
 import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import styled from "styled-components";
 import Question from "./Question";
 import { withRouter } from "react-router-dom";
 import SelectBar from "./SelectBar";
 import Slider from "./Slider";
-
-const MDBWrapper = styled.div`
-  margin: 10px auto;
-  width: 40%;
-  color: #fafafa !important;
-
-  @media (max-width: 768px) {
-    width: 90%;
-  }
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #333;
-  color: #fafafa;
-  border-radius: 5px;
-`;
 
 const Form = ({ history }) => {
   const [data, setData] = useState({});
