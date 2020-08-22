@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Question from "./Question";
 import { withRouter } from "react-router-dom";
 import SelectBar from "./SelectBar";
+import Slider from "./Slider";
 
 const MDBWrapper = styled.div`
   margin: 10px auto;
@@ -29,12 +30,22 @@ const Button = styled.button`
 const Form = ({ history }) => {
   const [data, setData] = useState({});
 
+  const keys = ["name", "class", "email", "time_zone", "personality", "stuff"];
+
   function pushToSheets() {
     console.log(data);
     var formData = new FormData();
     for (var key in data) {
       formData.append(key, data[key]);
     }
+
+    // UNCOMMENT to check for all filled in
+    // for (var i= 0; i < keys.length; i++) {
+    //   if(!data[keys[i]]) {
+    //     alert("Please fill in all fields");
+    //     return;
+    //   }
+    // }
 
     fetch(
       "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
@@ -57,14 +68,14 @@ const Form = ({ history }) => {
             <Question
               title="To start off, what's your full name?"
               label="Full Name"
-              keyName="name"
+              keyName={keys[0]}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
             <SelectBar
               title="What class are you in?"
               label="Class"
-              keyName="class"
+              keyName={keys[1]}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
@@ -72,7 +83,7 @@ const Form = ({ history }) => {
             <Question
               title="What's your email"
               label="Email"
-              keyName="email"
+              keyName={keys[2]}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
@@ -80,7 +91,14 @@ const Form = ({ history }) => {
             <Question
               title="What's your time zone"
               label="Time Zone"
-              keyName="time_zone"
+              keyName={keys[3]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <Slider
+              title="How much do you like pumpkins?"
+              keyName={keys[4]}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
@@ -88,7 +106,7 @@ const Form = ({ history }) => {
             <Question
               title="Stuff?"
               label="Stuff"
-              keyName="stuff"
+              keyName={keys[5]}
               moveSectionDown={pushToSheets}
               onChange={onChangeListener}
               submit={true}

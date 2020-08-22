@@ -23,6 +23,15 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: '1px dotted pink',
+    color: "black",
+    padding: 20,
+  })
+}
+
 const SelectBar = ({ title, label, keyName, moveSectionDown, onChange }) => {
   const [value, setValue] = useState("");
 
@@ -40,6 +49,7 @@ const SelectBar = ({ title, label, keyName, moveSectionDown, onChange }) => {
           }}
           placeholder={label}
           key={keyName}
+          styles={customStyles}
           options={options}
           onChange={(newValue, actionMeta) => {
             if (actionMeta.action === "select-option") {
