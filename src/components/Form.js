@@ -65,6 +65,12 @@ const Form = ({ history }) => {
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
+            <Slider
+              title="How much do you like pumpkins?"
+              keyName={keys[4]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
             <Question
               title="To start off, what's your full name?"
               label="Full Name"
@@ -95,14 +101,6 @@ const Form = ({ history }) => {
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
-
-            <Slider
-              title="How much do you like pumpkins?"
-              keyName={keys[4]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
-
             <Question
               title="Stuff?"
               label="Stuff"

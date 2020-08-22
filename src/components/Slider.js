@@ -8,6 +8,11 @@ const Left = styled.h5`
   left: -232px;
   top: 36px;
   display: inline;
+  @media (max-width: 768px) {
+    left: -96px;
+    top: 34px;
+    font-size: 14px;
+  }
 `;
 
 const Right = styled.h5`
@@ -15,6 +20,11 @@ const Right = styled.h5`
   right: -200px;
   top: 36px;
   display: inline;
+  @media (max-width: 768px) {
+    right: -75px;
+    top: 34px;
+    font-size: 14px;
+  }
 `;
 
 const Button = styled.button`
@@ -31,6 +41,11 @@ const Button = styled.button`
 const Wrapper= styled.div`
   text-align: center;
   margin: 0 auto;
+  width: 400px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `
 
 const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
@@ -49,7 +64,6 @@ const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
             moveSectionDown();
           }
         }}
-        style={{ width: "400px" }}
       >
         <Left>Disagree</Left>
         <Right>Agree</Right>
