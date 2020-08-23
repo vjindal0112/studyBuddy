@@ -41,7 +41,7 @@ AAS 254 - Ward
 AAS 250 - Woods
 AAS 246 - Jimenez
 AAS 225 - Ayoola
-"AAS 202 - Gunning, Askew"
+AAS 202 - Gunning, Askew
 AAS 200 - Ekotto
 AAS 125 - Ayoola
 AAS 115 - Mwipopo
@@ -88,8 +88,8 @@ AMCULT 103 - Desai
 AMCULT 103 - Walker
 RCASL 201 - Berwanger
 RCASL 100 - Berwanger
-"ANATOMY 403 - Sullivan, Alsup, Brzezinski, Fox"
-"ANATOMY 303 - Sullivan, Fox, Alsup"
+ANATOMY 403 - Sullivan, Alsup, Brzezinski, Fox
+ANATOMY 303 - Sullivan, Fox, Alsup
 ANTHRARC 494 - O'Shea
 ANTHRARC 388 - Semerari
 ANTHRARC 385 - Stewart
@@ -141,7 +141,7 @@ ALA 223 - Fretz
 ALA 210 - Peters
 ALA 175 - Haque
 ALA 171 - Gurin
-"ALA 170 - McKay, Curzan"
+ALA 170 - McKay, Curzan
 ALA 122 
 ALA 122 - Hwang (he/him/his)
 ALA 118 - Oney
@@ -206,7 +206,7 @@ ASIANLAN 335 - Oh
 ASIANLAN 335 
 ASIANLAN 325 
 ASIANLAN 325 - Sogabe
-"ASIANLAN 325 - Mochizuki, Sogabe"
+ ASIANLAN 325 - Mochizuki, Sogabe 
 ASIANLAN 304 - Gu
 ASIANLAN 301 - Liu
 ASIANLAN 301 - Li-Stevenson
@@ -243,7 +243,7 @@ ASIANLAN 111
 ASIANLAN 111 - Gonzaga
 ASIANLAN 104 - Gu
 ASIANLAN 104 - Liu
-"ASIANLAN 101 - Grande, Li-Stevenson"
+ASIANLAN 101 - Grande, Li-Stevenson
 ASIANLAN 100 - Zhong
 ASIANPAM 311 - Lee
 ASIANPAM 310 - Lawsin
@@ -284,17 +284,17 @@ ASIAN 207 - Lieberman
 ASIAN 206 - Glover
 ASIAN 204 - de Pee
 ASIAN 201 - Alexy
-"ASTRO 255 - Arbic, Hughes, Arnaboldi"
+ASTRO 255 - Arbic, Hughes, Arnaboldi
 ASTRO 220 - Hughes
 ASTRO 201 - Gultekin
 ASTRO 142 - Ruszkowski
 ASTRO 115 - Bergin
-"ASTRO 107 - Miller, Sharon"
+ASTRO 107 - Miller, Sharon
 ASTRO 106 - Meyer
 ASTRO 105 - Oey
 ASTRO 104 - Mateo
-"ASTRO 102 - Bregman, Lopresto"
-"ASTRO 101 - Hartmann, Rauscher"
+ASTRO 102 - Bregman, Lopresto
+ASTRO 101 - Hartmann, Rauscher
 AT 400 - Czajka
 AT 360 - Czajka
 AT 350 - Czajka
@@ -306,28 +306,28 @@ BIOLCHEM 451
 BIOLCHEM 415 - Ninfa
 BIOLCHEM 212 
 BIOLCHEM 212 - Stuckey
-"BIOLOGY 305 - Dus, Baucom"
+BIOLOGY 305 - Dus, Baucom
 BIOLOGY 281 - Lehman
-"BIOLOGY 207 - Denef, Dude Duhaime, Ammerlaan"
+BIOLOGY 207 - Denef, Dude Duhaime, Ammerlaan
 BIOLOGY 192 - Clark
 BIOLOGY 173 - Nowicki
-"BIOLOGY 172 - Chapman, Csankovszki"
-"BIOLOGY 172 - Csankovszki, Chapman"
+BIOLOGY 172 - Chapman, Csankovszki
+BIOLOGY 172 - Csankovszki, Chapman
 BIOLOGY 172 - Wood
 BIOLOGY 171 - Duffy
 BIOLOGY 171 - Giffen
 BIOLOGY 121 - Pichersky
 BIOLOGY 117 - Carpenter
-"BIOLOGY 110 - Kling, Badgley"
+BIOLOGY 110 - Kling, Badgley
 BIOLOGY 105 - Kurdziel
 BIOLOGY 101 - Vandermeer
 BIOMEDE 484 
 BIOMEDE 484 - Whitman
 BIOMEDE 474 - Putnam
-"BIOMEDE 458 - Claflin, Fan"
-"BIOMEDE 451 - Schmedlen, Sheffield, Gosbee"
-"BIOMEDE 231 - Baker, Louttit"
-"BIOMEDE 221 - Wrobel, Aguilar"
+BIOMEDE 458 - Claflin, Fan
+BIOMEDE 451 - Schmedlen, Sheffield, Gosbee
+BIOMEDE 231 - Baker, Louttit
+BIOMEDE 221 - Wrobel, Aguilar
 BIOPHYS 495 - Wood
 BIOPHYS 445 - Horowitz
 BIOPHYS 435 - Frank
@@ -336,7 +336,7 @@ BIOPHYS 401 - Brooks III
 BIOPHYS 370 - Wymore
 BCS 231 - Rosic
 BCS 131 - Rosic
-"BA 480 - Lafontaine, Tasoluk"
+BA 480 - Lafontaine, Tasoluk
 BA 476 - Hinesly
 BA 319 - Lee Cunningham
 BA 310 - Branch
@@ -351,7 +351,7 @@ CHE 496 - Antoniewicz
 CHE 496 - Singh
 CHE 496 - Kotov
 CHE 488 - Hirshfield
-"CHE 487 - Wang, Wilson"
+CHE 487 - Wang, Wilson
 CHE 466 - Allman
 CHE 460 - Albayrak Guralp
 CHE 412 - Love
@@ -447,7 +447,7 @@ CLIMATE 405 - Livi
 CLIMATE 401 - Rood
 CLIMATE 324 - De Roo
 CLIMATE 320 - Moldwin
-"CLIMATE 171 - Kling, Badgley"
+CLIMATE 171 - Kling, Badgley
 CLIMATE 105 - Flanner
 CLIMATE 102 - Samson
 COGSCI 445 - Abney
@@ -540,15 +540,15 @@ EARTH 370 - Pulkkinen
 EARTH 320 - Moldwin
 EARTH 315 - Li
 EARTH 315 
-"EARTH 313 - Dick, Wilson"
+EARTH 313 - Dick, Wilson
 EARTH 305 - Lohmann
 EARTH 262 - Smith
-"EARTH 255 - Arbic, Hughes, Arnaboldi"
+EARTH 255 - Arbic, Hughes, Arnaboldi
 EARTH 222 - Arnaboldi
 EARTH 219 - Blum
 EARTH 206 - Becker
 EARTH 201 - Gleason
-"EARTH 171 - Kling, Badgley"
+EARTH 171 - Kling, Badgley
 EARTH 131 - Cory
 EARTH 130 - Spica
 EARTH 130 
@@ -572,10 +572,10 @@ EEB 485 - Ostling
 EEB 466 - King
 EEB 440 - Lopez-Fernandez
 EEB 436 - Dick
-"EEB 410 - Lopez-Fernandez, Duda Jr"
+EEB 410 - Lopez-Fernandez, Duda Jr
 EEB 401 - Umana
 EEB 390 - Smith
-"EEB 313 - Dick, Wilson"
+EEB 313 - Dick, Wilson
 ECON 497 - Dominguez
 ECON 495 - Tesar
 ECON 452 - Hagemann
@@ -605,7 +605,7 @@ EDUC 490 - Bass
 EDUC 490 - Klingelhofer
 EDUC 480 - Moje
 EDUC 471 - Bastedo
-"EDUC 461 - Stanzler, Fahy"
+EDUC 461 - Stanzler, Fahy
 EDUC 460 - Ball
 EDUC 444 - Keren-Kolb
 EDUC 443 - Fortini
@@ -640,11 +640,11 @@ EDUC 240
 EDUC 212 - Spath
 EDUC 210 - Bass
 EDUC 200 - Santone
-"EDUC 119 - Goldin, Sawada"
+EDUC 119 - Goldin, Sawada
 EDCURINS 421 - Tohm
 EECS 498 - Berenson
-"EECS 498 - Madhyastha, Noble"
-"EECS 498 - Ali, Landwehr"
+EECS 498 - Madhyastha, Noble
+EECS 498 - Ali, Landwehr
 EECS 498 - Mars
 EECS 497 - Ringenberg
 EECS 496 - Subramanian
@@ -656,9 +656,9 @@ EECS 492 - Mower Provost
 EECS 490 - Omar
 EECS 489 - Chowdhury
 EECS 485 - DeOrio
-"EECS 484 - Leach, Mozafari"
-"EECS 484 - Mozafari, Leach"
-"EECS 481 - Weimer, Leach"
+EECS 484 - Leach, Mozafari
+EECS 484 - Mozafari, Leach
+EECS 481 - Weimer, Leach
 EECS 478 - Hayes
 EECS 477 - Pettie
 EECS 470 - Dreslinski Jr
@@ -666,7 +666,7 @@ EECS 467 - Kuipers
 EECS 463 - Hiskens
 EECS 461 - Freudenberg
 EECS 460 - Seiler
-"EECS 458 - Claflin, Fan"
+EECS 458 - Claflin, Fan
 EECS 455 - Stark
 EECS 445 - Kutty
 EECS 442 - Owens
@@ -680,12 +680,12 @@ EECS 423 - Kanicki
 EECS 421 - Ahmadi
 EECS 414 - Yoon
 EECS 413 - Afshari
-"EECS 388 - Genkin, Mao"
-"EECS 388 - Mao, Genkin"
+EECS 388 - Genkin, Mao
+EECS 388 - Mao, Genkin
 EECS 376 - Kamil
 EECS 376 - Volkovich
-"EECS 370 - Narayanasamy, Arthur"
-"EECS 367 - Jenkins, Zhou"
+EECS 370 - Narayanasamy, Arthur
+EECS 367 - Jenkins, Zhou
 EECS 351 - Balzano
 EECS 334 - Rand
 EECS 330 - Tsang
@@ -712,32 +712,32 @@ EECS 183 - Diaz
 EECS 183 - Kloosterman
 EECS 183 - Honeyman
 ENGR 490 - Millunchick
-"ENGR 490 - Quinn, Pawlow, Feeny, Chapin"
+ENGR 490 - Quinn, Pawlow, Feeny, Chapin
 ENGR 450 - Sienko
-"ENGR 430 - Wilson, McCormick, Mateju"
-"ENGR 330 - Edington, Mateju"
+ENGR 430 - Wilson, McCormick, Mateju
+ENGR 330 - Edington, Mateju
 ENGR 301 
 ENGR 260 - Cotel
-"ENGR 230 - Armstrong-Ceron, Dailey, Mateju"
-"ENGR 230 - Dailey, Armstrong-Ceron, Mateju"
+ENGR 230 - Armstrong-Ceron, Dailey, Mateju
+ENGR 230 - Dailey, Armstrong-Ceron, Mateju
 ENGR 151 - Thomas
 ENGR 101 - Juett
 ENGR 101 - Alford
 ENGR 101 - Niciejewski
-"ENGR 100 - Wynarsky, Hildinger"
-"ENGR 100 - Dick, Zahn"
-"ENGR 100 - Huang-Saad, Sulewski"
-"ENGR 100 - Shtein, Bowden"
-"ENGR 100 - Hayes, Royston"
-"ENGR 100 - Schwank, Zahn"
-"ENGR 100 - Dick, Himsel-Burcon"
-"ENGR 100 - Kota, Bowden"
-"ENGR 100 - Schultz, Casper"
-"ENGR 100 - Chesney, Alfano"
-"ENGR 100 - Mondisa, Vigiletti"
-"ENGR 100 - Stirling, Montgomery"
-"ENGR 100 - De Roo, Hogg Jr"
-"ENGR 100 - Alford, Fowler"
+ENGR 100 - Wynarsky, Hildinger
+ENGR 100 - Dick, Zahn
+ENGR 100 - Huang-Saad, Sulewski
+ENGR 100 - Shtein, Bowden
+ENGR 100 - Hayes, Royston
+ENGR 100 - Schwank, Zahn
+ENGR 100 - Dick, Himsel-Burcon
+ENGR 100 - Kota, Bowden
+ENGR 100 - Schultz, Casper
+ENGR 100 - Chesney, Alfano
+ENGR 100 - Mondisa, Vigiletti
+ENGR 100 - Stirling, Montgomery
+ENGR 100 - De Roo, Hogg Jr
+ENGR 100 - Alford, Fowler
 ENGLISH 495 - Pinch
 ENGLISH 490 - Larson
 ENGLISH 470 - Crane
@@ -770,7 +770,7 @@ ENGLISH 374 - Murphy
 ENGLISH 372 - Awkward
 ENGLISH 370 - Schey
 ENGLISH 367 - Trevor
-"ENGLISH 364 - Davies, Grant"
+ENGLISH 364 - Davies, Grant
 ENGLISH 363 - Habash
 ENGLISH 362 - Miller
 ENGLISH 361 - Hack
@@ -780,14 +780,14 @@ ENGLISH 346 - Brater
 ENGLISH 345 - Harp
 ENGLISH 345 - Pinto
 ENGLISH 344 - Beer
-"ENGLISH 340 - Sanok, Behrend"
+ENGLISH 340 - Sanok, Behrend
 ENGLISH 340 - Larson
 ENGLISH 328 - Coyle
 ENGLISH 325 - Hinken
 ENGLISH 324 - Chakraborty
 ENGLISH 323 - O'Dowd
 ENGLISH 322 - Delp
-"ENGLISH 317 - Schoenfeldt, Mueller, Robertson"
+ENGLISH 317 - Schoenfeldt, Mueller, Robertson
 ENGLISH 317 - Fitzgerald
 ENGLISH 317 - Clark
 ENGLISH 314 - Halperin
@@ -802,7 +802,7 @@ ENGLISH 290
 ENGLISH 285 - Miller
 ENGLISH 282 - Lyons
 ENGLISH 275 - Najita
-"ENGLISH 242 - Makman, Miller"
+ENGLISH 242 - Makman, Miller
 ENGLISH 240 - Ensor
 ENGLISH 232 - Nichols
 ENGLISH 230 - Lyons
@@ -829,10 +829,10 @@ ES 444 - Gordon
 ES 395 - Middleton
 ES 329 - Johnson
 ES 250 - Menon
-"ENTR 490 - Cucinelli, Hsia"
-"ENTR 490 - Sick, Fay"
+ENTR 490 - Cucinelli, Hsia
+ENTR 490 - Sick, Fay
 ENTR 407 - Bacyinski
-"ENTR 390 - Wingfield, Moore"
+ENTR 390 - Wingfield, Moore
 ENTR 390 - Bailey
 ENVIRON 464 - Fitzgerald
 ENVIRON 463 - Zak
@@ -865,7 +865,7 @@ ENVIRON 229 - Blum
 ENVIRON 222 - Bartlett
 ENVIRON 207 - Newell
 ENVIRON 206 - Becker
-"ENVIRON 204 - Benedict, Duvall"
+ENVIRON 204 - Benedict, Duvall
 ENVIRON 167 - Strassmann
 ENVIRON 139 - Klein
 ENVIRON 139 - Bouma
@@ -873,7 +873,7 @@ ENVIRON 131 - Cory
 ENVIRON 120 - Lange
 ENVIRON 119 - van der Pluijm
 ENVIRON 119 - Yarce
-"ENVIRON 110 - Kling, Badgley"
+ENVIRON 110 - Kling, Badgley
 ENVIRON 105 - Flanner
 ENVIRON 102 - Samson
 ENVIRON 101 - Vandermeer
@@ -890,7 +890,7 @@ FTVM 441 - Mihailova
 FTVM 441 - Rai
 FTVM 421 - Rayher
 FTVM 411 - Thornton
-"FTVM 404 - Goldenberg, Thornton, Chamberlin"
+FTVM 404 - Goldenberg, Thornton, Chamberlin
 FTVM 372 - Kligerman
 FTVM 368 - Murphy
 FTVM 366 - Phruksachart
@@ -1065,7 +1065,7 @@ HISTORY 197 - Poteet
 HISTORY 197 - Berrey
 HISTORY 197 - Fajardo
 HISTORY 105 - Muehlberger
-"HISTORY 101 - Mir, Alberto"
+HISTORY 101 - Mir, Alberto
 HISTART 498 - Lay
 HISTART 497 - Herwitz
 HISTART 489 - Toman
@@ -1132,7 +1132,7 @@ SI 430 - Naseem
 SI 429 - Schoenebeck
 SI 425 - Rosenblat
 SI 422 - Marcu
-"SI 405 - Schaub, TenBrink"
+SI 405 - Schaub, TenBrink
 SI 390 - Frazier
 SI 370 - Teplovs
 SI 364 - Severance
@@ -1140,13 +1140,13 @@ SI 345 - King
 SI 339 - van Lent
 SI 335 - Pierce
 SI 330 - Brooks
-"SI 320 - Godin, Besprozvany"
+SI 320 - Godin, Besprozvany
 SI 315 - Haimson
 SI 311 - Finholt
 SI 311 - Lampe
 SI 310 - Robert
 SI 301 - Romero
-"SI 300 - Kroll, Frazier"
+SI 300 - Kroll, Frazier
 SI 260 - Borland
 SI 206 - Ericson
 SI 110 - Lampe
@@ -1154,7 +1154,7 @@ SI 106 - Oney
 INSTHUM 311 - Mahama Mohammed
 INTPERF 160 - Hughes
 RCIDIV 350 - Regester
-"RCIDIV 350 - Seales, Regester"
+RCIDIV 350 - Seales, Regester
 RCIDIV 270 - Perfecto
 INTMED 460 - Moore
 INTMED 409 - Erb-Downward
@@ -1169,7 +1169,7 @@ INTLSTD 385 - Moll
 INTLSTD 384 - Masuzawa
 INTLSTD 384 - Chanchani
 INTLSTD 301 - Dincecco
-"INTLSTD 205 - Mir, Alberto"
+INTLSTD 205 - Mir, Alberto
 INTLSTD 170 - Sula
 INTLSTD 101 - Tsai
 ISLAM 422 - Babayan
@@ -1195,7 +1195,7 @@ ITALIAN 101 - Mosciatti
 ITALIAN 101 - Audiberti
 CJS 451 - Shin
 JAZZ 474 - Rowe
-"JAZZ 468 - Sarath, Hurst"
+JAZZ 468 - Sarath, Hurst
 JAZZ 460 - Wilson
 JAZZ 454 - Travers
 JAZZ 454 - Okazaki
@@ -1220,7 +1220,7 @@ JUDAIC 101
 JUDAIC 101 - Luchina
 KINESLGY 302 - Barton
 KINESLGY 302 - Rosentraub
-"KINESLGY 302 - Grant Long, Barton, Babiak"
+KINESLGY 302 - Grant Long, Barton, Babiak
 KRSTD 471 - Walsh
 KRSTD 392 - Walsh
 RCLANG 324 - Espinoza-Pino
@@ -1228,7 +1228,7 @@ RCLANG 323 - Makin
 RCLANG 320 - Butler-Borruat
 RCLANG 320 - Bayraktar
 RCLANG 314 - Espinoza-Pino
-"RCLANG 294 - Nunez, Rodriguez"
+RCLANG 294 - Nunez, Rodriguez
 RCLANG 294 - Nunez
 RCLANG 291 - Goertz
 RCLANG 196 - Okuno
@@ -1287,7 +1287,7 @@ LING 374 - Keane
 LING 347 - Levinson
 LING 210 - Coetzee
 LING 209 - Brennan
-"LING 137 - Queen, Curzan"
+LING 137 - Queen, Curzan
 LING 115 - Baptista
 LING 111 - Krivokapic
 LING 102 - Duanmu
@@ -1298,9 +1298,9 @@ MACROMOL 412 - Love
 MO 440 - Thornhill
 MO 321 - Mayer
 MO 302 - Sandelands
-"MFG 489 - Taub, Mangin"
-"MFG 470 - Vlahopoulos, Khan, Kumpf, Lozon"
-"MFG 470 - Vlahopoulos, Lozon"
+MFG 489 - Taub, Mangin
+MFG 470 - Vlahopoulos, Khan, Kumpf, Lozon
+MFG 470 - Vlahopoulos, Lozon
 MFG 466 - Jin
 MFG 463 - Armstrong
 MFG 461 - Hammett
@@ -1315,10 +1315,10 @@ MKT 411 - Burson
 MKT 409 - Collins
 MKT 408 - Krishna
 MKT 403 - Burson
-"MKT 312 - Olson, Feinberg, Carter"
+MKT 312 - Olson, Feinberg, Carter
 MKT 302 - Tasoluk
 MKT 302 - Rick
-"MATSCIE 481 - Taub, Mangin"
+MATSCIE 481 - Taub, Mangin
 MATSCIE 470 - Allison
 MATSCIE 454 
 MATSCIE 454 - Thornton
@@ -1339,7 +1339,7 @@ MATH 466 - King
 MATH 450 - Megginson
 MATH 385 
 MATH 216 - Barvinok
-"MATH 216 - Prokhorov, Barvinok"
+MATH 216 - Prokhorov, Barvinok
 MATH 216 - Storey
 MATH 215 - Smythe
 MATH 215 - Liu
@@ -1354,17 +1354,17 @@ MATH 115 - Johnson
 MECHENG 499 - Perkins
 MECHENG 499 - Shorter
 MECHENG 495 
-"MECHENG 495 - Meyhofer, Sangi Reddy, Hildinger, Kumpf"
+MECHENG 495 - Meyhofer, Sangi Reddy, Hildinger, Kumpf
 MECHENG 481 - Shih
-"MECHENG 395 - Liu, Grosh"
+MECHENG 395 - Liu, Grosh
 MECHENG 360 - Stein
-"MECHENG 350 - Umbriac, Okwudire"
+MECHENG 350 - Umbriac, Okwudire
 MECHENG 336 - Borgnakke
 MECHENG 335 - Fu
 MECHENG 320 - Adera
 MECHENG 320 - Akhavan
 MECHENG 320 - Liang
-"MECHENG 250 - Umbriac, Austin-Breneman"
+MECHENG 250 - Umbriac, Austin-Breneman
 MEMS 465 - Sanok
 MEMS 391 - Makin
 MEMS 375 - Gull
@@ -1375,7 +1375,7 @@ MEMS 250 - Gear
 MEMS 210 - Squatriti
 MICRBIOL 460 - Moore
 MICRBIOL 409 - Erb-Downward
-"MICRBIOL 405 - Laouar, Fuller, Hanna, Barron, Warheit-Niemi"
+MICRBIOL 405 - Laouar, Fuller, Hanna, Barron, Warheit-Niemi
 MELANG 460 
 MELANG 460 - Davis
 MELANG 450 - Northrop
@@ -1405,9 +1405,9 @@ MIDEAST 238 - Boccaccini
 MIDEAST 222 - Pifer
 MIDEAST 207 - Eliav
 MIDEAST 200 - Ali
-"MENAS 461 - Stanzler, Fahy"
-"MILSCI 201 - Moreno, Castillo, Kositz"
-"MILSCI 101 - Kositz, Castillo, Moreno"
+MENAS 461 - Stanzler, Fahy
+MILSCI 201 - Moreno, Castillo, Kositz
+MILSCI 101 - Kositz, Castillo, Moreno
 GREEKMOD 214 - Margomenou
 GREEKMOD 201 - Margomenou
 GREEKMOD 125 - Stroebel
@@ -1419,10 +1419,10 @@ MCDB 499 - Carpenter
 MCDB 465 - Kwon
 MCDB 436 - Moore
 MCDB 434 - Li
-"MCDB 427 - Schiefelbein, Kumar"
+MCDB 427 - Schiefelbein, Kumar
 MCDB 409 - Erb-Downward
 MCDB 401 - Xu
-"MCDB 310 - Stockbridge, Akey"
+MCDB 310 - Stockbridge, Akey
 MCDB 306 - Spillane
 MOVESCI 477 - Morgenstern
 MOVESCI 465 - Mergos
@@ -1436,7 +1436,7 @@ MUSED 372
 MUSED 372 - Fitzpatrick
 MUSED 341 
 MUSED 341 - McCarthy
-"MUSED 207 - Urena Gonzalez, Fitzpatrick"
+MUSED 207 - Urena Gonzalez, Fitzpatrick
 MUSED 205 
 MUSED 205 - Weaver
 MUSED 203 
@@ -1487,11 +1487,11 @@ NATIVEAM 333 - Najita
 NATIVEAM 322 - Pitawanakwat
 NATIVEAM 232 - Lyons
 NATIVEAM 222 - Pitawanakwat
-"RCNSCI 110 - Kling, Badgley"
-"NAVARCH 492 - Gose, Khan"
+RCNSCI 110 - Kling, Badgley
+NAVARCH 492 - Gose, Khan
 NAVARCH 492 - Gose
-"NAVARCH 470 - Vlahopoulos, Kumpf, Khan, Lozon"
-"NAVARCH 470 - Vlahopoulos, Lozon"
+NAVARCH 470 - Vlahopoulos, Kumpf, Khan, Lozon
+NAVARCH 470 - Vlahopoulos, Lozon
 NAVARCH 423 - Maki
 NAVARCH 410 - Karr
 NAVARCH 340 - Troesch
@@ -1517,7 +1517,7 @@ NERS 484 - Whitman
 NERS 471 - Gilgenbach
 NERS 462 - Talabi
 NERS 444 - Manera
-"NERS 441 - Downar, Yang"
+NERS 441 - Downar, Yang
 NERS 421 - Gao
 NERS 320 
 NERS 320 - Kiedrowski
@@ -1529,12 +1529,12 @@ NURS 420 - Eagle
 NURS 390 - Mutumba
 NURS 373 - Strobbe
 NURS 370 - Antilla
-"NURS 245 - Sharma, Petrosyan"
+NURS 245 - Sharma, Petrosyan
 NURS 236 - Sharma
 NURS 232 - Leech
 NURS 220 - Bailey
 NURS 196 - Strobbe
-"NURS 142 - Coleman-Burns, Keune"
+NURS 142 - Coleman-Burns, Keune
 OBOE 111 
 ORGSTUDY 495 - Fein
 ORGSTUDY 495 - Mizruchi
@@ -1560,7 +1560,7 @@ PHARMSCI 402 - Amidon
 PHARMSCI 400 
 PHARMSCI 400 - Cheng
 PHARMSCI 300 - Lee
-"PHRMACOL 310 - Iniguez-Lluhi, Maybaum, Jenkins, Canman, Ferrario"
+PHRMACOL 310 - Iniguez-Lluhi, Maybaum, Jenkins, Canman, Ferrario
 PHARMACY 302 - Benitez
 PHARMACY 200 - Pai
 PHIL 366 - Anderson
@@ -1587,15 +1587,15 @@ PHYSICS 406 - Aidala
 PHYSICS 402 - Cundiff
 PHYSICS 401 - Zhou
 PHYSICS 370 - Wymore
-"PHYSICS 340 - Uher, Kurdak"
-"PHYSICS 260 - Campbell, Avestruz"
+PHYSICS 340 - Uher, Kurdak
+PHYSICS 260 - Campbell, Avestruz
 PHYSICS 240 - Winn
 PHYSICS 240 - Lubensky
-"PHYSICS 235 - Eckhause, Chaney"
+PHYSICS 235 - Eckhause, Chaney
 PHYSICS 235 
 PHYSICS 210 - Tarle
 PHYSICS 169 - Adams
-"PHYSICS 160 - Orr, Merlin"
+PHYSICS 160 - Orr, Merlin
 PHYSICS 140 - Pando Zayas
 PHYSICS 135 
 PHYSICS 119 - Spica
@@ -1603,14 +1603,14 @@ PHYSICS 119
 PHYSIOL 406 - Oakley
 PHYSIOL 201 - Rust
 PIANO 111 - Liu
-"PIANO 110 - Solomonick, Ellis, Zick"
-"PIANO 110 - Wong, Ellis, Zick"
-"PIANO 110 - Lee, Harding, Zick, Ellis"
-"PIANO 110 - Wang, Harding, Zick, Ellis"
-"PIANO 110 - Sahin, Ellis, Zick"
-"PIANO 110 - Benson, Ellis, Zick"
-"PIANO 110 - Lee, Ellis, Zick"
-"PIANO 110 - Wang, Ellis, Zick"
+PIANO 110 - Solomonick, Ellis, Zick
+PIANO 110 - Wong, Ellis, Zick
+PIANO 110 - Lee, Harding, Zick, Ellis
+PIANO 110 - Wang, Harding, Zick, Ellis
+PIANO 110 - Sahin, Ellis, Zick
+PIANO 110 - Benson, Ellis, Zick
+PIANO 110 - Lee, Ellis, Zick
+PIANO 110 - Wang, Ellis, Zick
 PIANOLP 489 - Bengtson
 PIANOLP 401 - Grijalva
 POLISH 421 - Pasek
@@ -1706,7 +1706,7 @@ PUBHLTH 381 - Creary
 PUBPOL 491 - Bednar
 PUBPOL 479 - Pilkauskas
 PUBPOL 476 - Sanders
-"PUBPOL 475 - Goldenberg, Thornton, Chamberlin"
+PUBPOL 475 - Goldenberg, Thornton, Chamberlin
 PUBPOL 466 - Farley
 PUBPOL 428 
 PUBPOL 428 - Xu
@@ -1770,7 +1770,7 @@ SW 305 - Chaney
 SW 300 - Williams
 SOC 495 - Zhou
 SOC 495 
-"SOC 495 - Neidert, Farley"
+SOC 495 - Neidert, Farley
 SOC 495 - Young Jr
 SOC 475 - Kelley
 SOC 465 - McGann
@@ -1791,7 +1791,7 @@ SOC 304
 SOC 304 - Pedraza
 SOC 302 - Kelley
 SOC 295 
-"SOC 250 - de Souza Leao, Triplett"
+SOC 250 - de Souza Leao, Triplett
 SOC 240 - Gocek
 SOC 225 - Christensen
 SOC 210 - Ybarra
@@ -1825,7 +1825,7 @@ SPANISH 287 - Larrotiz
 SPANISH 280 - Sanchez Gumiel
 SPANISH 101 
 SPANISH 101 - Piper
-"SM 463 - Fort, Szymanski"
+SM 463 - Fort, Szymanski
 SM 454 - Park
 SM 436 - Pollick
 SM 330 - Wang
@@ -1936,7 +1936,7 @@ TCHNCLCM 380 - Wisniewski
 TCHNCLCM 300 - Lewis
 TCHNCLCM 300 - Fishstrom
 TCHNCLCM 300 - Zahn
-"TO 482 - Duenyas, Kapuscinski"
+TO 482 - Duenyas, Kapuscinski
 TO 482 
 TO 415 - Etzion
 TO 414 - Kumar
@@ -1990,14 +1990,14 @@ TURKISH 101 - Sevinc
 UKR 351 - Rogovyk
 UKR 251 - Bondarenko
 UKR 151 - Bondarenko
-"UC 415 - Moore, Blass"
+UC 415 - Moore, Blass
 UC 415 - Sih
 UC 390 - Espinoza
 UC 380 - Nemtanu
 UC 307 - Wilkinson
 UC 280 - Knox
 UC 205 - Nunn
-"UC 203 - Moreno, Kositz, Castillo"
+UC 203 - Moreno, Kositz, Castillo
 UC 201 - Penry
 UC 154 - Modey
 UC 110 - Lampe
@@ -2005,10 +2005,10 @@ URP 423 - D'Anieri
 URP 357 - Maigret
 VIOLIN 460 - Schotten
 VIOLIN 111 
-"VOICE 111 - Amon, Best"
+VOICE 111 - Amon, Best
 VOICELIT 491 - Katz
 VOICELIT 469 - Severtson
-"VOICELIT 203 - Cheek, Rusche"
+VOICELIT 203 - Cheek, Rusche
 VOICELIT 200 - Thompson
 WELLNESS 412 - Matuza
 WELLNESS 220 - Obrecht

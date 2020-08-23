@@ -49,6 +49,7 @@ const Form = ({ history }) => {
     <ReactFullpage
       //fullpage options
       scrollingSpeed={1000} /* Options here */
+      autoScrolling={false}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -80,7 +81,7 @@ const Form = ({ history }) => {
             <Slider
               title="How interested are you in taking this class?"
               keyName={keys[3]}
-              leftText={"Not at all interested"}
+              leftText={"Not interested"}
               rightText={"Very interested"}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
@@ -90,7 +91,7 @@ const Form = ({ history }) => {
               title="What grade would you be happy with in this class?"
               label="Grade"
               keyName={keys[4]}
-              options={grades}
+              choices={grades}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
@@ -110,10 +111,10 @@ const Form = ({ history }) => {
               onChange={onChangeListener}
             />
             <Slider
-              title="How did you learn last semester?"
+              title="How did you study last semester?"
               keyName={keys[3]}
-              leftText={"binge studied before the midterm"}
-              rightText={"slow and steady"}
+              leftText={"binged before"}
+              rightText={"slow & steady"}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
