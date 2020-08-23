@@ -6,56 +6,66 @@ import styled from "styled-components";
 const Left = styled.h5`
   position: relative;
   left: -232px;
-  top: 39px;
-  display: inline;
+  top: 44px;
+  width: 60px;
+  display: inline-block;
+  overflow-wrap: normal;
+
   @media (max-width: 768px) {
-    left: -96px;
-    top: 34px;
+    left: -90px;
+    top: 36px;
     font-size: 14px;
   }
 `;
 
 const Right = styled.h5`
   position: relative;
-  right: -204px;
-  top: 39px;
-  display: inline;
+  right: -214px;
+  top: 44px;
+  width: 60px;
+  display: inline-block;
+  overflow-wrap: normal;
+
   @media (max-width: 768px) {
-    right: -75px;
-    top: 34px;
+    right: -90px;
+    top: 36px;
     font-size: 14px;
   }
 `;
 
 const Button = styled.button`
-  padding: 10px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #333;
+  border: 4px solid #ffcb05;
+  padding: 4px 8px;
   color: #fafafa;
-  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: all 0.5s;
+  &:hover {
+    background-color: #ffcb05;
+  }
+`;
+
+const QuestionWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Wrapper = styled.div`
-  text-align: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  margin-bottom: 32px;
   width: 400px;
+  color: #fafafa !important;
 
   @media (max-width: 768px) {
     width: 150px;
   }
 `;
 
-const Slider = ({
-  title,
-  keyName,
-  leftText,
-  rightText,
-  moveSectionDown,
-  onChange,
-}) => {
+const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
   const [value, setValue] = useState(2);
 
   useEffect(() => {
@@ -64,7 +74,9 @@ const Slider = ({
 
   return (
     <div className="section">
-      <p>{title}</p>
+      <QuestionWrapper>
+        <p>{title}</p>
+      </QuestionWrapper>
       <Wrapper
         onKeyDown={(e) => {
           if (e.key === "Enter") {
@@ -72,8 +84,8 @@ const Slider = ({
           }
         }}
       >
-        <Left>{leftText}</Left>
-        <Right>{rightText}</Right>
+        <Left>Strongly Disagree</Left>
+        <Right>Strongly Agree</Right>
         <RangeSlider
           key={keyName}
           value={value}
@@ -81,11 +93,10 @@ const Slider = ({
             setValue(e.target.value);
             onChange(keyName, e.target.value);
           }}
-          value={value}
           min={0}
           max={4}
           tooltip="off"
-          size={"lg"}
+          size={"sm"}
           variant={"light"}
         />
       </Wrapper>

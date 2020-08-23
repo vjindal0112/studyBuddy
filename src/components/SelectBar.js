@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Select from "react-select";
 
 const Wrapper = styled.div`
-  margin: 10px auto;
+  margin: 20px auto;
   width: 40%;
   color: #fafafa !important;
 
@@ -13,14 +13,24 @@ const Wrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 10px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #333;
+  border: 4px solid #ffcb05;
+  padding: 4px 8px;
   color: #fafafa;
-  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: all 0.5s;
+  &:hover {
+    background-color: #ffcb05;
+  }
+`;
+
+const QuestionWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const customStyles = {
@@ -40,11 +50,15 @@ const SelectBar = ({
   moveSectionDown,
   onChange,
 }) => {
-  useEffect(() => {}, [keyName, choices]);
+  const [value, setValue] = useState("");
+  useEffect(() => {}, [keyName, choices, value]);
 
   return (
     <div className="section">
-      <p>{title}</p>
+      <QuestionWrapper>
+        <p>{title}</p>
+      </QuestionWrapper>
+      {console.log(value)}
       <Wrapper>
         <Select
           onKeyDown={(e) => {
@@ -56,9 +70,18 @@ const SelectBar = ({
           key={keyName}
           styles={customStyles}
           options={choices}
+          inputValue={value}
+          onInputChange={(e) => {
+            if (e !== "" && typeof e != "object") {
+              setValue(e);
+            } else if (value.length === 1 && typeof e != "object") {
+              setValue(e);
+            }
+          }}
           onChange={(newValue, actionMeta) => {
             if (actionMeta.action === "select-option") {
               onChange(keyName, newValue.value);
+              setValue(newValue.value);
             }
           }}
         />

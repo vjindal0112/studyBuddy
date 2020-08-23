@@ -10,13 +10,16 @@ const Form = ({ history }) => {
 
   const keys = [
     "name",
-    "email",
+    "year",
+    "gender",
     "class",
     "interest",
     "ambition",
-    "grade",
-    "year",
-    "gender",
+    "binge-study",
+    "work-ethic",
+    "study-sociability",
+    "student-org",
+    "email",
   ];
 
   function pushToSheets() {
@@ -27,12 +30,16 @@ const Form = ({ history }) => {
     }
 
     // UNCOMMENT to check for all filled in
-    // for (var i= 0; i < keys.length; i++) {
-    //   if(!data[keys[i]]) {
-    //     alert("Please fill in all fields");
-    //     return;
-    //   }
-    // }
+    for (var i = 0; i < keys.length; i++) {
+      if (!data[keys[i]]) {
+        alert("Please fill in all fields");
+        return;
+      }
+      if (!data["email"].includes("@umich.edu")) {
+        alert("Please enter your UMich email");
+        return;
+      }
+    }
 
     fetch(
       "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
@@ -61,40 +68,6 @@ const Form = ({ history }) => {
               onChange={onChangeListener}
             />
 
-            <Question
-              title="What's your UMich email?"
-              label="Email"
-              keyName={keys[1]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
-
-            <SelectBar
-              title="Which class are you taking?"
-              label="Class"
-              keyName={keys[2]}
-              choices={options}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
-
-            <Slider
-              title="How interested are you in taking this class?"
-              keyName={keys[3]}
-              leftText={"Not interested"}
-              rightText={"Very interested"}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
-
-            <SelectBar
-              title="What grade would you be happy with in this class?"
-              label="Grade"
-              keyName={keys[4]}
-              choices={grades}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
             <SelectBar
               title="What year are you?"
               label="Year"
@@ -103,26 +76,75 @@ const Form = ({ history }) => {
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
+
             <SelectBar
-              label="Gender?"
-              keyName={keys[1]}
+              title="How do you identify?"
+              label="Gender"
+              keyName={keys[2]}
               choices={gender}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
-            <Slider
-              title="How did you study last semester?"
+
+            <SelectBar
+              title="Which class are you taking?"
+              label="Class"
               keyName={keys[3]}
-              leftText={"binged before"}
-              rightText={"slow & steady"}
+              choices={options}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <Slider
+              title="I am interested in taking this class"
+              keyName={keys[4]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <SelectBar
+              title="What grade would you be happy with in this class?"
+              label="Grade"
+              keyName={keys[5]}
+              choices={grades}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <Slider
+              title="I usually binge study a couple days before a midterm"
+              keyName={keys[6]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <Slider
+              title="I typically study more than other students in my class"
+              keyName={keys[7]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <Slider
+              title="I frequently do my homework with other students"
+              keyName={keys[8]}
+              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              onChange={onChangeListener}
+            />
+
+            <SelectBar
+              title="Which type of student org do you spend the most time on?"
+              label="Select affiliation"
+              keyName={keys[9]}
+              choices={orgs}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
 
             <Question
-              title="Stuff?"
-              label="Stuff"
-              keyName={keys[5]}
+              title="What's your UMich email?"
+              label="Email"
+              keyName={keys[10]}
               moveSectionDown={pushToSheets}
               onChange={onChangeListener}
               submit={true}
@@ -135,6 +157,20 @@ const Form = ({ history }) => {
 };
 
 export default withRouter(Form);
+
+const orgs = [
+  { value: "Greek Life", label: "Greek Life" },
+  { value: "Business", label: "Business" },
+  { value: "Medical", label: "Medical" },
+  { value: "Engineering", label: "Engineering" },
+  { value: "Sports", label: "Sports" },
+  {
+    value: "Social - but not Greek Life",
+    label: "Social - but not Greek Life",
+  },
+  { value: "Other", label: "Other" },
+  { value: "None yet!", label: "None yet!" },
+];
 
 const grades = [
   { value: "A+", label: "A+" },

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 10px auto;
+  margin: 20px auto;
   width: 40%;
   color: #fafafa !important;
 
@@ -12,14 +12,16 @@ const Wrapper = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 10px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #333;
+  border: 4px solid #ffcb05;
+  padding: 4px 8px;
   color: #fafafa;
-  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+
+  transition: all 0.5s;
+  &:hover {
+    background-color: #ffcb05;
+  }
 `;
 
 const Input = styled.input`
@@ -49,6 +51,14 @@ const Input = styled.input`
   }
 `;
 
+const QuestionWrapper = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+`;
+
 const Question = ({
   title,
   label,
@@ -63,8 +73,10 @@ const Question = ({
 
   return (
     <div className="section">
-      <p>{title}</p>
-    <Wrapper>
+      <QuestionWrapper>
+        <p>{title}</p>
+      </QuestionWrapper>
+      <Wrapper>
         <Input
           style={{ color: "#fafafa", outline: "#fafafa" }}
           key={keyName}
