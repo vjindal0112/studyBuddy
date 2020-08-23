@@ -56,7 +56,7 @@ export default function Home() {
           <p>
             We realize Zoom University makes it kinda hard to — you know —
             actually make friends in your classes. And let’s face it, every
-            class is more bearable when you have homies with dope explanations
+            class is more bearable when you have homies with fire explanations
             the day before your midterm from hell.{" "}
           </p>
           <p>

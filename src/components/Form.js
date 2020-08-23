@@ -6,7 +6,12 @@ import SelectBar from "./SelectBar";
 import Slider from "./Slider";
 
 const Form = ({ history }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    "interest": 2,
+    "binge-study": 2,
+    "study-sociability": 2,
+    "work-ethic": 2
+  });
 
   const keys = [
     "name",
@@ -23,7 +28,6 @@ const Form = ({ history }) => {
   ];
 
   function pushToSheets() {
-    console.log(data);
     var formData = new FormData();
     for (var key in data) {
       formData.append(key, data[key]);

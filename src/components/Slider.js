@@ -69,7 +69,6 @@ const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
   const [value, setValue] = useState(2);
 
   useEffect(() => {
-    onChange(keyName, value);
   }, [keyName]);
 
   return (

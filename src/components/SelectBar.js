@@ -58,7 +58,6 @@ const SelectBar = ({
       <QuestionWrapper>
         <p>{title}</p>
       </QuestionWrapper>
-      {console.log(value)}
       <Wrapper>
         <Select
           onKeyDown={(e) => {
