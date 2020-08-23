@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Left = styled.h5`
   position: relative;
   left: -232px;
-  top: 36px;
+  top: 39px;
   display: inline;
   @media (max-width: 768px) {
     left: -96px;
@@ -17,8 +17,8 @@ const Left = styled.h5`
 
 const Right = styled.h5`
   position: relative;
-  right: -200px;
-  top: 36px;
+  right: -204px;
+  top: 39px;
   display: inline;
   @media (max-width: 768px) {
     right: -75px;
@@ -38,7 +38,7 @@ const Button = styled.button`
   border-radius: 5px;
 `;
 
-const Wrapper= styled.div`
+const Wrapper = styled.div`
   text-align: center;
   margin: 0 auto;
   width: 400px;
@@ -46,9 +46,16 @@ const Wrapper= styled.div`
   @media (max-width: 768px) {
     width: 150px;
   }
-`
+`;
 
-const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
+const Slider = ({
+  title,
+  keyName,
+  leftText,
+  rightText,
+  moveSectionDown,
+  onChange,
+}) => {
   const [value, setValue] = useState(2);
 
   useEffect(() => {
@@ -65,8 +72,8 @@ const Slider = ({ title, keyName, moveSectionDown, onChange }) => {
           }
         }}
       >
-        <Left>Disagree</Left>
-        <Right>Agree</Right>
+        <Left>{leftText}</Left>
+        <Right>{rightText}</Right>
         <RangeSlider
           key={keyName}
           value={value}
