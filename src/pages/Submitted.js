@@ -1,5 +1,13 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
+
+const Texth4 = styled.h4`
+  max-width: 50%;
+  @media(max-width: 768px) {
+    max-width: 90%;
+  }
+`;
 
 const Submitted = () => {
   return (
@@ -47,10 +55,9 @@ const Submitted = () => {
       </Helmet>
       <div className="App">
         <h1>Congrats, and good luck!</h1>
-        <h3>
-          You will hear back from us via email on September 5th with your Study
-          Buddy.
-        </h3>
+        <Texth4>
+          You will hear back from us via email on September 5th with your StudyBuddies. Remember to fill out the form multiple times for multiple classes.
+        </Texth4>
       </div>
     </>
   );
