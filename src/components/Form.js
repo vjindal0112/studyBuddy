@@ -44,7 +44,6 @@ const Form = ({ history }) => {
         return;
       }
     }
-
     fetch(
       "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
       { method: "POST", body: formData }

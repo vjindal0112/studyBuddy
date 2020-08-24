@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../StudyBuddyLogo.png";
 import { Helmet } from "react-helmet";
+import CountUp from "react-countup";
 
 const Button = styled.a`
   border: 4px solid #ffcb05;
@@ -43,7 +44,23 @@ const TextDiv = styled.div`
   text-justify: inter-word;
 `;
 
+const UserCount = styled.div`
+  margin: 0px 8px;
+  color: #ffcb05;
+  font-weight: 500;
+`;
+
 export default function Home() {
+  const [userCount, setUserCount] = useState(0);
+
+  useEffect(() => {
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxP3gykUXOcNunlc7uvzvwPiBcL1h44XzxSjsn3Vvu1vW0XB7U/exec"
+    )
+      .then((snapshot) => snapshot.json())
+      .then((num) => setUserCount(num.number));
+  });
+
   return (
     <>
       <Helmet
@@ -87,9 +104,18 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
-      <div className="App" style={{ height: "80vh", minHeight: "80vh" }}>
+      <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+          <div>
+            Join
+          </div>
+          <UserCount>
+            <CountUp end={userCount} />
+          </UserCount>
+          <div>Wolverines</div>
+        </div>
         <Button href="/form">Find Your Buddy</Button>
       </div>
       <Section backgroundColor="#fefefe">
