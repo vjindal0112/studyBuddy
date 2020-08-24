@@ -47,7 +47,7 @@ export default function Home() {
     <>
       <div className="App" style={{ height: "80vh", minHeight: "80vh" }}>
         <Logo src={logo} />
-        <Heading>UMich StudyBuddies</Heading>
+        <Heading>Michigan StudyBuddies</Heading>
         <Button href="/form">Find Your Buddy</Button>
       </div>
       <Section backgroundColor="#fefefe">
