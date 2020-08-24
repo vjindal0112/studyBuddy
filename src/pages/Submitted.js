@@ -27,7 +27,7 @@ const Submitted = () => {
   return (
     <>
       <Helmet
-        title="UMich StudyBuddies"
+        title="UMich StudyBuddies | Submitted"
         meta={[
           {
             name: "description",
@@ -36,7 +36,7 @@ const Submitted = () => {
           },
           {
             name: "og:title",
-            content: "UMich StudyBuddies",
+            content: "UMich StudyBuddies | Submitted",
           },
           {
             name: "og:description",
@@ -53,7 +53,7 @@ const Submitted = () => {
           },
           {
             name: "twitter:title",
-            content: "UMich StudyBuddies",
+            content: "UMich StudyBuddies | Submitted",
           },
           {
             name: "twitter:description",

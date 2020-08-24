@@ -7,7 +7,7 @@ export default function FormPage() {
   return (
     <>
     <Helmet
-        title="UMich StudyBuddies"
+        title="UMich StudyBuddies | Form"
         meta={[
           {
             name: "description",
@@ -16,7 +16,7 @@ export default function FormPage() {
           },
           {
             name: "og:title",
-            content: "UMich StudyBuddies",
+            content: "UMich StudyBuddies | Form",
           },
           {
             name: "og:description",
@@ -33,7 +33,7 @@ export default function FormPage() {
           },
           {
             name: "twitter:title",
-            content: "UMich StudyBuddies",
+            content: "UMich StudyBuddies | Form",
           },
           {
             name: "twitter:description",
