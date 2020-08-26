@@ -58,7 +58,7 @@ export default function Home() {
       "https://script.google.com/macros/s/AKfycbxP3gykUXOcNunlc7uvzvwPiBcL1h44XzxSjsn3Vvu1vW0XB7U/exec"
     )
       .then((snapshot) => snapshot.json())
-      .then((num) => setUserCount(num.number));
+      .then((num) => setUserCount(parseInt(num.number)));
   });
 
   return (
@@ -77,7 +77,8 @@ export default function Home() {
           },
           {
             name: "og:description",
-            content: "Find study friends in your classes",
+            content:
+              "Get paired with 2 other study friends in your class at the University of Michigan. We only match you with people we know you will vibe with.",
           },
           { name: "og:url", content: "https://umichstudybuddies.com" },
           {
@@ -107,10 +108,15 @@ export default function Home() {
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
-          <div>
-            Join
-          </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div>Join</div>
           <UserCount>
             <CountUp end={userCount} />
           </UserCount>

@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import { Helmet } from "react-helmet";
+import styled from "styled-components";
 
 const Texth4 = styled.h4`
   max-width: 50%;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     max-width: 90%;
   }
 `;
@@ -27,20 +27,21 @@ const Submitted = () => {
   return (
     <>
       <Helmet
-        title="UMich StudyBuddies | Submitted"
+        title="Submitted | UMich StudyBuddies"
         meta={[
           {
             name: "description",
             content:
-              "Get paired with 2 other study friends in your class at the University of Michigan. We only match you with people we know you will vibe with.",
+              "Get paired with 2 other study friends in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
           },
           {
             name: "og:title",
-            content: "UMich StudyBuddies | Submitted",
+            content: "Submitted | UMich StudyBuddies",
           },
           {
             name: "og:description",
-            content: "Find study friends in your classes",
+            content:
+              "Get paired with 2 other study friends in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
           },
           { name: "og:url", content: "https://umichstudybuddies.com" },
           {
@@ -53,7 +54,7 @@ const Submitted = () => {
           },
           {
             name: "twitter:title",
-            content: "UMich StudyBuddies | Submitted",
+            content: "Submitted | UMich StudyBuddies",
           },
           {
             name: "twitter:description",
@@ -70,11 +71,11 @@ const Submitted = () => {
       <div className="App">
         <h1>Congrats, and good luck!</h1>
         <Texth4>
-          You will hear back from us via email on September 5th with your StudyBuddies. Remember to fill out the form multiple times for multiple classes.
+          You will hear back from us via email on September 5th with your
+          StudyBuddies. Remember to fill out the form multiple times for
+          multiple classes.
         </Texth4>
-        <Button href="/form">
-          Another Class
-        </Button>
+        <Button href="/form">Another Class</Button>
       </div>
     </>
   );
