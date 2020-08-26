@@ -51,7 +51,7 @@ const UserCount = styled.div`
 `;
 
 export default function Home() {
-  const [userCount, setUserCount] = useState(0);
+  const [userCount, setUserCount] = useState(2000);
 
   useEffect(() => {
     fetch(
@@ -118,7 +118,7 @@ export default function Home() {
         >
           <div>Join</div>
           <UserCount>
-            <CountUp end={userCount} />
+            <CountUp start={2000} end={userCount} />
           </UserCount>
           <div>Wolverines</div>
         </div>
