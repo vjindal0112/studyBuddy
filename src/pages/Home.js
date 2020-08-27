@@ -130,8 +130,8 @@ export default function Home() {
           <p>
             We realize Zoom University makes it kinda hard to — you know —
             actually make friends in your classes. And let’s face it, every
-            class is more bearable when you have homies with fire explanations
-            the day before your midterm from hell.{" "}
+            class is more bearable when you have friends with fire explanations
+            the day before your midterm.{" "}
           </p>
           <p>
             So, we created this study buddy matching service to make sure being
