@@ -32,7 +32,7 @@ const Submitted = () => {
           {
             name: "description",
             content:
-              "Get paired with 2 other study friends in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
+              "Get paired with 2 other study buddies in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
           },
           {
             name: "og:title",
@@ -41,7 +41,7 @@ const Submitted = () => {
           {
             name: "og:description",
             content:
-              "Get paired with 2 other study friends in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
+              "Get paired with 2 other study buddies in your class at the University of Michigan by September 5th. We only match you with people we know you will vibe with.",
           },
           { name: "og:url", content: "https://umichstudybuddies.com" },
           {
@@ -58,7 +58,7 @@ const Submitted = () => {
           },
           {
             name: "twitter:description",
-            content: "Find study friends in your classes",
+            content: "Find study buddies in your classes",
           },
           {
             name: "twitter:image",

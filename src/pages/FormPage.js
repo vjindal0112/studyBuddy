@@ -12,7 +12,7 @@ export default function FormPage() {
           {
             name: "description",
             content:
-              "Fill out this form to get paired with 2 other study friends in your class at the University of Michigan. We only match you with people we know you will vibe with.",
+              "Fill out this form to get paired with 2 other study buddies in your class at the University of Michigan. We only match you with people we know you will vibe with.",
           },
           {
             name: "og:title",
@@ -21,7 +21,7 @@ export default function FormPage() {
           {
             name: "og:description",
             content:
-              "Fill out this form to get paired with 2 other study friends in your class at the University of Michigan. We only match you with people we know you will vibe with.",
+              "Fill out this form to get paired with 2 other study buddies in your class at the University of Michigan. We only match you with people we know you will vibe with.",
           },
           { name: "og:url", content: "https://umichstudybuddies.com" },
           {
@@ -38,7 +38,7 @@ export default function FormPage() {
           },
           {
             name: "twitter:description",
-            content: "Find study friends in your classes",
+            content: "Find study buddies in your classes",
           },
           {
             name: "twitter:image",
