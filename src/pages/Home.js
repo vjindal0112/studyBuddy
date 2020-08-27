@@ -47,7 +47,7 @@ const TextDiv = styled.div`
 const UserCount = styled.div`
   margin: 0px 8px;
   color: #ffcb05;
-  font-weight: 500;
+  font-weight: 800;
 `;
 
 export default function Home() {
