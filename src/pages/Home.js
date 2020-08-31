@@ -51,7 +51,7 @@ const UserCount = styled.div`
 `;
 
 export default function Home() {
-  const [userCount, setUserCount] = useState(2500);
+  const [userCount, setUserCount] = useState(3500);
 
   useEffect(() => {
     fetch(
@@ -118,7 +118,7 @@ export default function Home() {
         >
           <div>Join</div>
           <UserCount>
-            <CountUp start={2500} end={userCount} />
+            <CountUp start={3500} end={userCount} />
           </UserCount>
           <div>Wolverines</div>
         </div>
@@ -155,7 +155,7 @@ export default function Home() {
             together.
           </p>
           <p>
-            All of this data will be completely anonymized and private, so you
+            All of this data will be completely private, so you
             have nothing to worry about.
           </p>
         </TextDiv>
