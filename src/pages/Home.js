@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import logo from "../StudyBuddyLogo.png";
 import { Helmet } from "react-helmet";
 import CountUp from "react-countup";
@@ -49,6 +49,46 @@ const UserCount = styled.div`
   color: #ffcb05;
   font-weight: 800;
 `;
+
+const drop = keyframes`
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  20% {
+    height: 40px;
+    opacity: 1;
+  }
+
+  90% {
+    height: 40px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+    display: none;
+  }
+`;
+
+const Banner = styled.div`
+  position: absolute;
+  top:0%;
+  width: 100%;
+  background-color: #FFCB05;
+  color: #00274C;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  animation: ${drop} 6s ease-out;
+  opacity: 0;
+`
+
+
 
 export default function Home() {
   const [userCount, setUserCount] = useState(3500);
@@ -105,6 +145,7 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
+      <Banner>Closes Friday at noon!</Banner>
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
