@@ -3,6 +3,46 @@ import Form from "../components/Form";
 import "../App.css";
 import { Helmet } from "react-helmet";
 
+import styled, { keyframes } from 'styled-components';
+
+const drop = keyframes`
+  0% {
+    height: 0px;
+    opacity: 0;
+  }
+
+  20% {
+    height: 40px;
+    opacity: 1;
+  }
+
+  90% {
+    height: 40px;
+    opacity: 1;
+  }
+
+  100% {
+    height: 0px;
+    opacity: 0;
+    display: none;
+  }
+`;
+
+const Banner = styled.div`
+  position: absolute;
+  top:0%;
+  width: 100%;
+  background-color: #FFCB05;
+  color: #00274C;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  animation: ${drop} 6s ease-out;
+  opacity: 0;
+`
+
 export default function FormPage() {
   return (
     <>
@@ -48,8 +88,10 @@ export default function FormPage() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
+
+      <Banner>The form is closed!</Banner>
       <div className="App">
-        <Form />
+        {/* <Form /> */}
       </div>
     </>
   );

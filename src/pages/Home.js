@@ -91,7 +91,7 @@ const Banner = styled.div`
 
 
 export default function Home() {
-  const [userCount, setUserCount] = useState(3500);
+  const [userCount, setUserCount] = useState(6000);
 
   useEffect(() => {
     fetch(
@@ -145,7 +145,7 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
-      <Banner>Closes Friday at noon!</Banner>
+      <Banner>The form is closed!</Banner>
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
@@ -159,11 +159,11 @@ export default function Home() {
         >
           <div>Join</div>
           <UserCount>
-            <CountUp start={3500} end={userCount} />
+            <CountUp start={6000} end={userCount} />
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button href="/form">Find Your Buddy</Button>
+        <Button>Closed</Button>
       </div>
       <Section backgroundColor="#fefefe">
         <TextDiv>

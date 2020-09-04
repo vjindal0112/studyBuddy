@@ -28,27 +28,29 @@ const Form = ({ history }) => {
   ];
 
   function pushToSheets() {
-    var formData = new FormData();
-    for (var key in data) {
-      formData.append(key, data[key]);
-    }
+    // var formData = new FormData();
+    // for (var key in data) {
+    //   formData.append(key, data[key]);
+    // }
+
+    alert("The form has closed! We will be in touch with your buddies on September 5th")
 
     // UNCOMMENT to check for all filled in
-    for (var i = 0; i < keys.length; i++) {
-      if (!data[keys[i]]) {
-        alert("Please fill in all fields");
-        return;
-      }
-      if (!data["email"].includes("@umich.edu")) {
-        alert("Please enter your UMich email");
-        return;
-      }
-    }
-    fetch(
-      "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
-      { method: "POST", body: formData }
-    );
-    history.push("/submitted");
+    // for (var i = 0; i < keys.length; i++) {
+    //   if (!data[keys[i]]) {
+    //     alert("Please fill in all fields");
+    //     return;
+    //   }
+    //   if (!data["email"].includes("@umich.edu")) {
+    //     alert("Please enter your UMich email");
+    //     return;
+    //   }
+    // }
+    // fetch(
+    //   "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
+    //   { method: "POST", body: formData }
+    // );
+    // history.push("/submitted");
   }
 
   function onChangeListener(key, value) {
