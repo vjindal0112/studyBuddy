@@ -216,7 +216,7 @@ export default function Home() {
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
-            The form will close on September 4th at midnight because we want to
+            The form will close on September 4th at noon because we want to
             get you your StudyBuddies by September 5th.
           </p>
         </TextDiv>
