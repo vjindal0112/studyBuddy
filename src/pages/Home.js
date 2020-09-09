@@ -145,7 +145,7 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
-      <Banner>The form is closed!</Banner>
+      <Banner>Only Open for SM 203!</Banner>
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
@@ -163,7 +163,7 @@ export default function Home() {
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button>Closed</Button>
+        <Button href="/form">Find your Buddy</Button>
       </div>
       <Section backgroundColor="#fefefe">
         <TextDiv>
@@ -187,7 +187,7 @@ export default function Home() {
           <p>
             Once you complete the form by entering your class and some of your
             study habits (due September 4th!), we will let you know your Study
-            Buddies via email by September 5th.
+            Buddies via email by September 5th. It is September 13th at noon for SM 203.
           </p>
           <p>
             We know that it's pretty hard to study with someone who you aren't
@@ -205,19 +205,19 @@ export default function Home() {
         <TextDiv>
           <h1 style={{ textAlign: "center" }}>FAQ</h1>
 
-          <p>
+          {/* <p>
             <b>Can I fill the form out for more than one class?</b>
           </p>
           <p>
             Yes! You’re encouraged to. We’d love to give you a group of
             studybuddies for every class you’re taking this semester.
-          </p>
+          </p> */}
           <p>
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
             The form will close on September 4th at noon because we want to
-            get you your StudyBuddies by September 5th.
+            get you your StudyBuddies by September 5th. It is September 13th at noon for SM 203.
           </p>
         </TextDiv>
       </Section>

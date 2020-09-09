@@ -71,11 +71,10 @@ const Submitted = () => {
       <div className="App">
         <h1>Congrats, and good luck!</h1>
         <Texth4>
-          You will hear back from us via email on September 5th with your
-          StudyBuddies. Remember to fill out the form multiple times for
-          multiple classes.
+          You will hear back from us via email on September 15th with your
+          StudyBuddies for SM 203
         </Texth4>
-        <Button href="/form">Another Class</Button>
+        {/* <Button href="/form">Another Class</Button> */}
       </div>
     </>
   );

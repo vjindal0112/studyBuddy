@@ -28,29 +28,27 @@ const Form = ({ history }) => {
   ];
 
   function pushToSheets() {
-    // var formData = new FormData();
-    // for (var key in data) {
-    //   formData.append(key, data[key]);
-    // }
-
-    alert("The form has closed! We will be in touch with your buddies on September 5th")
+    var formData = new FormData();
+    for (var key in data) {
+      formData.append(key, data[key]);
+    }
 
     // UNCOMMENT to check for all filled in
-    // for (var i = 0; i < keys.length; i++) {
-    //   if (!data[keys[i]]) {
-    //     alert("Please fill in all fields");
-    //     return;
-    //   }
-    //   if (!data["email"].includes("@umich.edu")) {
-    //     alert("Please enter your UMich email");
-    //     return;
-    //   }
-    // }
-    // fetch(
-    //   "https://script.google.com/macros/s/AKfycbwg_wYiIAPWHCTfCORy0bHttzkBdWIMZHmlwaeJyagwzsOxOE0/exec",
-    //   { method: "POST", body: formData }
-    // );
-    // history.push("/submitted");
+    for (var i = 0; i < keys.length; i++) {
+      if (!data[keys[i]]) {
+        alert("Please fill in all fields");
+        return;
+      }
+      if (!data["email"].includes("@umich.edu")) {
+        alert("Please enter your UMich email");
+        return;
+      }
+    }
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxsJCRqzZa84wWw3YEIjutxl9rJ6vq8yxrUoGLIg3ahtgWKQgo/exec",
+      { method: "POST", body: formData }
+    );
+    history.push("/submitted");
   }
 
   function onChangeListener(key, value) {
@@ -95,7 +93,7 @@ const Form = ({ history }) => {
               title="Which class are you taking?"
               label="Class"
               keyName={keys[3]}
-              choices={options}
+              choices={singleClass}
               moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
               onChange={onChangeListener}
             />
@@ -203,6 +201,10 @@ const gender = [
   { value: "Non-Binary", label: "Non-Binary" },
   { value: "Prefer not to say", label: "Prefer not to say" },
 ];
+
+const singleClass = [
+  { value: "SM 203 - George", label: "SM 203 - George" }
+]
 
 const options = [
   { value: "AAS 200 - Ekotto", label: "AAS 200 - Ekotto" },
