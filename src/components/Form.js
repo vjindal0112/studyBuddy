@@ -33,22 +33,24 @@ const Form = ({ history }) => {
       formData.append(key, data[key]);
     }
 
+    alert("The form is closed!");
+
     // UNCOMMENT to check for all filled in
-    for (var i = 0; i < keys.length; i++) {
-      if (!data[keys[i]]) {
-        alert("Please fill in all fields");
-        return;
-      }
-      if (!data["email"].includes("@umich.edu")) {
-        alert("Please enter your UMich email");
-        return;
-      }
-    }
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxsJCRqzZa84wWw3YEIjutxl9rJ6vq8yxrUoGLIg3ahtgWKQgo/exec",
-      { method: "POST", body: formData }
-    );
-    history.push("/submitted");
+    // for (var i = 0; i < keys.length; i++) {
+    //   if (!data[keys[i]]) {
+    //     alert("Please fill in all fields");
+    //     return;
+    //   }
+    //   if (!data["email"].includes("@umich.edu")) {
+    //     alert("Please enter your UMich email");
+    //     return;
+    //   }
+    // }
+    // fetch(
+    //   "https://script.google.com/macros/s/AKfycbxsJCRqzZa84wWw3YEIjutxl9rJ6vq8yxrUoGLIg3ahtgWKQgo/exec",
+    //   { method: "POST", body: formData }
+    // );
+    // history.push("/submitted");
   }
 
   function onChangeListener(key, value) {

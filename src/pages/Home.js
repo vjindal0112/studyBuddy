@@ -145,7 +145,7 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
-      <Banner>Only Open for SM 203!</Banner>
+      <Banner>The form is closed!</Banner>
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
@@ -163,7 +163,7 @@ export default function Home() {
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button href="/form">Find your Buddy</Button>
+        <Button>Closed</Button>
       </div>
       <Section backgroundColor="#fefefe">
         <TextDiv>

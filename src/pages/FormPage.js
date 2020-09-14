@@ -89,9 +89,9 @@ export default function FormPage() {
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
 
-      <Banner>Only open for SM 203!</Banner>
+      <Banner>The form is closed!</Banner>
       <div className="App">
-        <Form />
+        {/* <Form /> */}
       </div>
     </>
   );
