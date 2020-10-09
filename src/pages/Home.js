@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import logo from "../StudyBuddyLogo.png";
 import { Helmet } from "react-helmet";
 import CountUp from "react-countup";
+import ReactGA from "react-ga";
 
 const Button = styled.a`
   border: 4px solid #ffcb05;
@@ -75,10 +76,10 @@ const drop = keyframes`
 
 const Banner = styled.div`
   position: absolute;
-  top:0%;
+  top: 0%;
   width: 100%;
-  background-color: #FFCB05;
-  color: #00274C;
+  background-color: #ffcb05;
+  color: #00274c;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -86,9 +87,7 @@ const Banner = styled.div`
   font-weight: 600;
   animation: ${drop} 6s ease-out;
   opacity: 0;
-`
-
-
+`;
 
 export default function Home() {
   const [userCount, setUserCount] = useState(6000);
@@ -145,7 +144,6 @@ export default function Home() {
       >
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
-      <Banner>The form is closed!</Banner>
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         <Logo src={logo} />
         <Heading>Michigan StudyBuddies</Heading>
@@ -163,7 +161,18 @@ export default function Home() {
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button>Closed</Button>
+        <Button
+          onClick={() => {
+            ReactGA.event({
+              category: "Navigation",
+              action: "Click",
+              label: "Find your Buddy",
+            });
+          }}
+          href="/form"
+        >
+          Find your Buddies
+        </Button>
       </div>
       <Section backgroundColor="#fefefe">
         <TextDiv>
@@ -186,8 +195,8 @@ export default function Home() {
           <h1 style={{ textAlign: "center" }}>How does it work?</h1>
           <p>
             Once you complete the form by entering your class and some of your
-            study habits (due September 4th!), we will let you know your Study
-            Buddies via email by September 5th. It is September 13th at noon for SM 203.
+            study habits (due October 16th!), we will let you know your Study
+            Buddies via email by October 18th.
           </p>
           <p>
             We know that it's pretty hard to study with someone who you aren't
@@ -196,8 +205,8 @@ export default function Home() {
             together.
           </p>
           <p>
-            All of this data will be completely private, so you
-            have nothing to worry about.
+            All of this data will be completely private, so you have nothing to
+            worry about.
           </p>
         </TextDiv>
       </Section>
@@ -216,8 +225,8 @@ export default function Home() {
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
-            The form will close on September 4th at noon because we want to
-            get you your StudyBuddies by September 5th. It is September 13th at noon for SM 203.
+            The form will close on October 16th at noon because we want to get
+            you your StudyBuddies by October 18th.
           </p>
         </TextDiv>
       </Section>

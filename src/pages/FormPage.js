@@ -3,7 +3,7 @@ import Form from "../components/Form";
 import "../App.css";
 import { Helmet } from "react-helmet";
 
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const drop = keyframes`
   0% {
@@ -30,10 +30,10 @@ const drop = keyframes`
 
 const Banner = styled.div`
   position: absolute;
-  top:0%;
+  top: 0%;
   width: 100%;
-  background-color: #FFCB05;
-  color: #00274C;
+  background-color: #ffcb05;
+  color: #00274c;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ const Banner = styled.div`
   font-weight: 600;
   animation: ${drop} 6s ease-out;
   opacity: 0;
-`
+`;
 
 export default function FormPage() {
   return (
@@ -89,9 +89,9 @@ export default function FormPage() {
         <link rel="canonical" href="https://umichstudybuddies.com/" />
       </Helmet>
 
-      <Banner>The form is closed!</Banner>
+      <Banner>Open only for ENGR 100, 101, and 110!</Banner>
       <div className="App">
-        {/* <Form /> */}
+        <Form />
       </div>
     </>
   );
