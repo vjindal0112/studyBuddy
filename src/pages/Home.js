@@ -131,7 +131,7 @@ export default function Home() {
           <br />
           <Flex>
             <BulletPoints>2</BulletPoints>
-            <BulletText>Get your buddies Oct. 12</BulletText>
+            <BulletText>Get your buddies Oct. 18</BulletText>
           </Flex>
           <br />
           <Flex>
@@ -180,8 +180,8 @@ export default function Home() {
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
-            The form will close on October 10th at noon because we want to get
-            you your StudyBuddies by October 12th.
+            The form will close on October 16th at noon because we want to get
+            you your StudyBuddies by October 18th.
           </p>
           <p>
             <b>Where can I find more information?</b>
