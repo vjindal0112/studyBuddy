@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Question from "./Question";
+import Privacy from "./Privacy";
 import { withRouter } from "react-router-dom";
 import SelectBar from "./SelectBar";
 import Slider from "./Slider";
+import { SaveBanner } from "./styles";
 
 const Form = ({ history }) => {
   const [data, setData] = useState({
-    interest: 2,
-    "binge-study": 2,
-    "study-sociability": 2,
-    "work-ethic": 2,
+    name: "",
+    year: "",
+    gender: "",
+    class: "",
+    interest: "2",
+    ambition: "",
+    "binge-study": "2",
+    "work-ethic": "2",
+    "study-sociability": "2",
+    "student-org": "",
+    email: "",
+    number: "",
   });
+
+  const [reset, setReset] = useState(false);
+  const [animate, setAnimate] = useState(false); // for Save Confirmation Banner
 
   const keys = [
     "name",
@@ -25,136 +38,208 @@ const Form = ({ history }) => {
     "study-sociability",
     "student-org",
     "email",
+    "number",
   ];
 
-  function pushToSheets() {
-    var formData = new FormData();
-    for (var key in data) {
-      formData.append(key, data[key]);
+  function bannerUp() {
+    setAnimate(false);
+  }
+
+  function pushToSheets(anotherClass) {
+    // UNCOMMENT to check for all filled in
+    for (var i = 0; i < keys.length; i++) {
+      if (!data[keys[i]]) {
+        alert("Please fill in all fields");
+        return false;
+      }
+      if (!data["email"].toLowerCase().includes("@umich.edu")) {
+        alert("Please enter your @umich.edu email");
+        return false;
+      }
+      if (data["number"].replace(/[^\d]/g, "").length < 10) {
+        alert("Please enter a valid phone number");
+        return false;
+      }
     }
 
-    alert("The form is closed!");
+    var formData = new FormData();
+    for (var key in data) {
+      if (key == "email") {
+        formData.append(key, data[key].toLowerCase().trim());
+      } else {
+        formData.append(key, data[key].trim());
+      }
+    }
+    setData({ ...data, class: "", interest: "2", ambition: "" });
+    setReset((reset) => !reset);
+    setAnimate(true);
+    setTimeout(bannerUp, 4000);
+    fetch(
+      "https://script.google.com/macros/s/AKfycby6_irou4tDaduFuQeUyGaXMy8bfd2WwlWGlatQDSAVMAWReOXT/exec",
+      { method: "POST", body: formData }
+    );
+    if (anotherClass) {
+      window.scrollTo({
+        top: window.innerHeight * 4,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+    return true;
+  }
 
-    // UNCOMMENT to check for all filled in
-    // for (var i = 0; i < keys.length; i++) {
-    //   if (!data[keys[i]]) {
-    //     alert("Please fill in all fields");
-    //     return;
-    //   }
-    //   if (!data["email"].includes("@umich.edu")) {
-    //     alert("Please enter your UMich email");
-    //     return;
-    //   }
-    // }
-    // fetch(
-    //   "https://script.google.com/macros/s/AKfycbxsJCRqzZa84wWw3YEIjutxl9rJ6vq8yxrUoGLIg3ahtgWKQgo/exec",
-    //   { method: "POST", body: formData }
-    // );
-    // history.push("/submitted");
+  function submit() {
+    if (pushToSheets()) {
+      history.push("/submitted");
+    }
   }
 
   function onChangeListener(key, value) {
     setData({ ...data, [key]: value });
   }
 
+  useEffect(() => {}, [data]);
+
   return (
     <ReactFullpage
       //fullpage options
       scrollingSpeed={1000} /* Options here */
       autoScrolling={false}
+      fitToSection={false}
       render={({ state, fullpageApi }) => {
         return (
-          <ReactFullpage.Wrapper>
-            <Question
-              title="To start off, what's your full name?"
-              label="Full Name"
-              keyName={keys[0]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+          <>
+          {console.log(data)}
+            <ReactFullpage.Wrapper>
+              <SaveBanner animate={animate}>
+                Saved your class, fill out these 3 fields for another
+              </SaveBanner>
 
-            <SelectBar
-              title="What year are you?"
-              label="Year"
-              keyName={keys[1]}
-              choices={year}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <Privacy
+                message="Once you fill this out, we'll match you with 3 buddies in your class based on the similarity of your responses"
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                buttonMessage="Let's get started"
+              />
 
-            <SelectBar
-              title="How do you identify?"
-              label="Gender"
-              keyName={keys[2]}
-              choices={gender}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <Question
+                title="To start off, what's your full name?"
+                label="Full Name"
+                keyName={keys[0]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[0]]}
+              />
 
-            <SelectBar
-              title="Which class are you taking?"
-              label="Class"
-              keyName={keys[3]}
-              choices={singleClass}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <SelectBar
+                title="What year are you?"
+                label="Year"
+                keyName={keys[1]}
+                choices={year}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[1]]}
+              />
 
-            <Slider
-              title="I am interested in taking this class"
-              keyName={keys[4]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <SelectBar
+                title="How do you identify?"
+                label="Gender"
+                keyName={keys[2]}
+                choices={gender}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[2]]}
+              />
 
-            <SelectBar
-              title="What grade would you be happy with in this class?"
-              label="Grade"
-              keyName={keys[5]}
-              choices={grades}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <SelectBar
+                title="Which class are you taking?"
+                label="Class"
+                keyName={keys[3]}
+                choices={singleClass}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[3]]}
+                reset={reset}
+              />
 
-            <Slider
-              title="I usually binge study a couple days before a midterm"
-              keyName={keys[6]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <Slider
+                title="I am interested in taking this class"
+                keyName={keys[4]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[4]]}
+              />
 
-            <Slider
-              title="I typically study more than other students in my class"
-              keyName={keys[7]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <SelectBar
+                title="What grade would you be happy with in this class?"
+                label="Grade"
+                keyName={keys[5]}
+                choices={grades}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[5]]}
+                reset={reset}
+              />
 
-            <Slider
-              title="I frequently do my homework with other students"
-              keyName={keys[8]}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <Slider
+                title="I usually binge study a couple days before a midterm"
+                keyName={keys[6]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[6]]}
+              />
 
-            <SelectBar
-              title="Which type of student org do you spend the most time on?"
-              label="Select affiliation"
-              keyName={keys[9]}
-              choices={orgs}
-              moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              onChange={onChangeListener}
-            />
+              <Slider
+                title="I typically study more than other students in my class"
+                keyName={keys[7]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[7]]}
+              />
 
-            <Question
-              title="What's your UMich email?"
-              label="Email"
-              keyName={keys[10]}
-              moveSectionDown={pushToSheets}
-              onChange={onChangeListener}
-              submit={true}
-            />
-          </ReactFullpage.Wrapper>
+              <Slider
+                title="I frequently do my homework with other students"
+                keyName={keys[8]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[8]]}
+              />
+
+              <SelectBar
+                title="Which type of student org do you spend the most time on?"
+                label="Select affiliation"
+                keyName={keys[9]}
+                choices={orgs}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[9]]}
+              />
+
+              <Question
+                title="What's your phone number?"
+                number={true}
+                keyName={keys[11]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[11]]}
+              />
+
+              <Privacy
+                message="Just a heads up, we will be sharing your phone number and email with your study buddies"
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+              />
+
+              <Question
+                title="What's your UMich email?"
+                label="Email"
+                keyName={keys[10]}
+                moveSectionDown={pushToSheets}
+                onChange={onChangeListener}
+                submitFunction={submit}
+                submit={true}
+                initial={data[keys[10]]}
+              />
+            </ReactFullpage.Wrapper>
+          </>
         );
       }}
     />
@@ -178,14 +263,14 @@ const orgs = [
 ];
 
 const grades = [
-  { value: "A+", label: "A+" },
-  { value: "A", label: "A" },
-  { value: "A-", label: "A-" },
-  { value: "B+", label: "B+" },
-  { value: "B", label: "B" },
-  { value: "B-", label: "B-" },
-  { value: "C+", label: "C+" },
-  { value: "C", label: "C" },
+  { value: " A+", label: " A+" },
+  { value: " A", label: " A" },
+  { value: " A-", label: " A-" },
+  { value: " B+", label: " B+" },
+  { value: " B", label: " B" },
+  { value: " B-", label: " B-" },
+  { value: " C+", label: " C+" },
+  { value: " C", label: " C" },
   { value: "just pass", label: "just pass" },
 ];
 
@@ -241,6 +326,7 @@ const singleClass = [
   { value: "ENGR 101 - Juett", label: "ENGR 101 - Juett" },
   { value: "ENGR 101 - Alford", label: "ENGR 101 - Alford" },
   { value: "ENGR 101 - Niciejewski", label: "ENGR 101 - Niciejewski" },
+  { value: "ENGR 110 - Marsik, Terry Jr", label: "ENGR 110 - Marsik, Terry Jr"}
 ];
 
 const options = [

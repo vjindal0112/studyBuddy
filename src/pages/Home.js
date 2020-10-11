@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import logo from "../StudyBuddyLogo.png";
-import { Helmet } from "react-helmet";
+import Header from "../components/Header";
 import CountUp from "react-countup";
+import { Button, UserCount, Banner } from "../components/styles"; // styles used for shared styles
 import ReactGA from "react-ga";
-
-const Button = styled.a`
-  border: 4px solid #ffcb05;
-  padding: 12px;
-  margin: 24px;
-  color: #fafafa;
-
-  transition: all 0.5s;
-  &:hover {
-    background-color: #ffcb05;
-  }
-`;
+import { collegeDark, collegeLight } from "../constants";
 
 const Heading = styled.h1`
   font-size: 60px;
@@ -23,18 +13,45 @@ const Heading = styled.h1`
     font-size: 40px;
   }
   padding: 10px;
+  font-weight: 400;
+`;
+
+const Section = styled.section`
+  text-align: center;
+  padding: ${(props) => props.padding};
+  color: #333;
+  background-color: ${(props) => props.backgroundColor};
+`;
+
+const Flex = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  margin-left: 10px;
+`;
+
+const OuterFlex = styled.div`
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  @media (min-width: 550px) {
+    padding-left: 50px;
+  }
+`;
+
+const BulletText = styled.div`
+  margin-left: 20px;
+  font-size: 24px;
+  color: black;
+  display: flex;
+  text-align: left;
 `;
 
 const Logo = styled.img`
   max-height: 40vh;
   margin-top: 30px;
-`;
-
-const Section = styled.section`
-  text-align: center;
-  padding: 50px;
-  color: #333;
-  background-color: ${(props) => props.backgroundColor};
 `;
 
 const TextDiv = styled.div`
@@ -45,52 +62,20 @@ const TextDiv = styled.div`
   text-justify: inter-word;
 `;
 
-const UserCount = styled.div`
-  margin: 0px 8px;
-  color: #ffcb05;
-  font-weight: 800;
-`;
-
-const drop = keyframes`
-  0% {
-    height: 0px;
-    opacity: 0;
-  }
-
-  20% {
-    height: 40px;
-    opacity: 1;
-  }
-
-  90% {
-    height: 40px;
-    opacity: 1;
-  }
-
-  100% {
-    height: 0px;
-    opacity: 0;
-    display: none;
-  }
-`;
-
-const Banner = styled.div`
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  background-color: #ffcb05;
-  color: #00274c;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  animation: ${drop} 6s ease-out;
-  opacity: 0;
+const BulletPoints = styled.div`
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: ${collegeDark};
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  flex-shrink: 0;
 `;
 
 export default function Home() {
-  const [userCount, setUserCount] = useState(6000);
+  const [userCount, setUserCount] = useState(6500);
 
   useEffect(() => {
     fetch(
@@ -102,64 +87,26 @@ export default function Home() {
 
   return (
     <>
-      <Helmet
-        title="UMich StudyBuddies"
-        meta={[
-          {
-            name: "description",
-            content:
-              "Get paired with 2 other study buddies in your class at the University of Michigan. We only match you with people we know you will vibe with.",
-          },
-          {
-            name: "og:title",
-            content: "UMich StudyBuddies",
-          },
-          {
-            name: "og:description",
-            content:
-              "Get paired with 2 other study buddies in your class at the University of Michigan. We only match you with people we know you will vibe with.",
-          },
-          { name: "og:url", content: "https://umichstudybuddies.com" },
-          {
-            name: "og:image",
-            content: "https://umichstudybuddies.com/SocialSharing.png",
-          },
-          {
-            name: "twitter:url",
-            content: "https://umichstudybuddies.com",
-          },
-          {
-            name: "twitter:title",
-            content: "UMich StudyBuddies",
-          },
-          {
-            name: "twitter:description",
-            content: "Find study buddies in your classes",
-          },
-          {
-            name: "twitter:image",
-            content: "https://umichstudybuddies.com/SocialSharing.png",
-          },
-        ]}
-      >
-        <link rel="canonical" href="https://umichstudybuddies.com/" />
-      </Helmet>
+      <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
+        <Banner>Open only for ENGR 100, 101, and 110!</Banner>
         <Logo src={logo} />
-        <Heading>Michigan StudyBuddies</Heading>
+        <Heading>UMich StudyBuddies</Heading>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
+            marginRight: "10px",
+            marginLeft: "10px",
           }}
         >
           <div>Join</div>
           <UserCount>
-            <CountUp start={6000} end={userCount} />
+            <CountUp start={6500} end={userCount} />
           </UserCount>
-          <div>Wolverines</div>
+          <div>Bruins</div>
         </div>
         <Button
           onClick={() => {
@@ -174,35 +121,32 @@ export default function Home() {
           Find your Buddies
         </Button>
       </div>
-      <Section backgroundColor="#fefefe">
-        <TextDiv>
-          <h1 style={{ textAlign: "center" }}>What is this?</h1>
-          <p>
-            We realize Zoom University makes it kinda hard to — you know —
-            actually make friends in your classes. And let’s face it, every
-            class is more bearable when you have friends with fire explanations
-            the day before your midterm.{" "}
-          </p>
-          <p>
-            So, we created this study buddy matching service to make sure being
-            virtual doesn’t stop you from finding the friends that can help you
-            get that shiny A.
-          </p>
-        </TextDiv>
+      <Section padding="20px" backgroundColor="#fefefe">
+        <h1 style={{ textAlign: "center" }}>How it works</h1>
+        <OuterFlex>
+          <Flex>
+            <BulletPoints>1</BulletPoints>
+            <BulletText>Fill out a 60 second form</BulletText>
+          </Flex>
+          <br />
+          <Flex>
+            <BulletPoints>2</BulletPoints>
+            <BulletText>Get your buddies Oct. 12</BulletText>
+          </Flex>
+          <br />
+          <Flex>
+            <BulletPoints>3</BulletPoints>
+            <BulletText>Make your group chat!</BulletText>
+          </Flex>
+        </OuterFlex>
       </Section>
-      <Section backgroundColor="#f2f2f2">
+      <Section padding="50px" backgroundColor="#f2f2f2">
         <TextDiv>
-          <h1 style={{ textAlign: "center" }}>How does it work?</h1>
+          <h1 style={{ textAlign: "center" }}>Get connected</h1>
           <p>
-            Once you complete the form by entering your class and some of your
-            study habits (due October 16th!), we will let you know your Study
-            Buddies via email by October 18th.
-          </p>
-          <p>
-            We know that it's pretty hard to study with someone who you aren't
-            friends with so we have also included a few personality questions.
-            We will use this data to match you up so you can dominate the class
-            together.
+            We match you with a group of 4 people based on your study habits,
+            interests, and club affiliations. You’ll only be matched with people
+            in your class.
           </p>
           <p>
             All of this data will be completely private, so you have nothing to
@@ -210,23 +154,43 @@ export default function Home() {
           </p>
         </TextDiv>
       </Section>
-      <Section backgroundColor="#FFFFF">
+      <Section padding="50px" backgroundColor="#fefefe">
+        <TextDiv>
+          <h1 style={{ textAlign: "center" }}>We make it easy</h1>
+
+          <p>
+            Zoom University makes it really hard to find friends in your
+            classes. We’ll faciliate a group chat for you so it’s easy to reach
+            out.{" "}
+          </p>
+        </TextDiv>
+      </Section>
+      <Section padding="50px" backgroundColor="#f2f2f2">
         <TextDiv>
           <h1 style={{ textAlign: "center" }}>FAQ</h1>
 
-          {/* <p>
+          <p>
             <b>Can I fill the form out for more than one class?</b>
           </p>
           <p>
             Yes! You’re encouraged to. We’d love to give you a group of
-            studybuddies for every class you’re taking this semester.
-          </p> */}
+            studybuddies for every class you’re taking this quarter.
+          </p>
           <p>
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
-            The form will close on October 16th at noon because we want to get
-            you your StudyBuddies by October 18th.
+            The form will close on October 10th at noon because we want to get
+            you your StudyBuddies by October 12th.
+          </p>
+          <p>
+            <b>Where can I find more information?</b>
+          </p>
+          <p>
+            Check out our medium post here:{" "}
+            <a href="https://medium.com/@vjindal0112/why-we-made-studybuddies-493beda5d8f7">
+              Why We Made StudyBuddies
+            </a>
           </p>
         </TextDiv>
       </Section>
