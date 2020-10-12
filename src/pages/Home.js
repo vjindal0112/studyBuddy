@@ -89,7 +89,6 @@ export default function Home() {
     <>
       <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
-        <Banner>Open only for ENGR 100, 101, and 110!</Banner>
         <Logo src={logo} />
         <Heading>UMich StudyBuddies</Heading>
         <div
