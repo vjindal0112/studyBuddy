@@ -109,7 +109,7 @@ const Form = ({ history }) => {
       render={({ state, fullpageApi }) => {
         return (
           <>
-          {console.log(data)}
+            {console.log(data)}
             <ReactFullpage.Wrapper>
               <SaveBanner animate={animate}>
                 Saved your class, fill out these 3 fields for another
@@ -326,7 +326,31 @@ const singleClass = [
   { value: "ENGR 101 - Juett", label: "ENGR 101 - Juett" },
   { value: "ENGR 101 - Alford", label: "ENGR 101 - Alford" },
   { value: "ENGR 101 - Niciejewski", label: "ENGR 101 - Niciejewski" },
-  { value: "ENGR 110 - Marsik, Terry Jr", label: "ENGR 110 - Marsik, Terry Jr"}
+  {
+    value: "ENGR 110 - Marsik, Terry Jr",
+    label: "ENGR 110 - Marsik, Terry Jr",
+  },
+  { value: "MATH 115 ", label: "MATH 115 " },
+  { value: "MATH 116 ", label: "MATH 116 " },
+  { value: "MATH 215 ", label: "MATH 215 " },
+  { value: "MATH 216 ", label: "MATH 216 " },
+  { value: "PHYSICS 140", label: "PHYSICS 140" },
+  { value: "PHYSICS 140 - Popov", label: "PHYSICS 140 - Popov" },
+  { value: "PHYSICS 140 - Pando Zayas", label: "PHYSICS 140 - Pando Zayas" },
+  { value: "PHYSICS 140 - Zochowski", label: "PHYSICS 140 - Zochowski" },
+  { value: "PHYSICS 140 - Melnichuk", label: "PHYSICS 140 - Melnichuk" },
+  { value: "PHYSICS 160 - Orr, Merlin", label: "PHYSICS 160 - Orr, Merlin" },
+  { value: "PHYSICS 240", label: "PHYSICS 240" },
+  { value: "PHYSICS 240 - Winn", label: "PHYSICS 240 - Winn" },
+  { value: "PHYSICS 240 - Lubensky", label: "PHYSICS 240 - Lubensky" },
+  {
+    value: "PHYSICS 260 - Campbell, Avestruz",
+    label: "PHYSICS 260 - Campbell, Avestruz",
+  },
+  { value: "CHEM 130", label: "CHEM 130" },
+  { value: "CHEM 130 - Welty", label: "CHEM 130 - Welty" },
+  { value: "CHEM 130 - Albright", label: "CHEM 130 - Albright" },
+  { value: "CHEM 130 - Castaneda", label: "CHEM 130 - Castaneda" },
 ];
 
 const options = [
