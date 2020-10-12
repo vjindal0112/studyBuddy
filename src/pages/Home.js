@@ -106,7 +106,7 @@ export default function Home() {
           <UserCount>
             <CountUp start={6500} end={userCount} />
           </UserCount>
-          <div>Bruins</div>
+          <div>Wolverines</div>
         </div>
         <Button
           onClick={() => {
