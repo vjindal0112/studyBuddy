@@ -29,7 +29,6 @@ const Submitted = () => {
               label: "Another Class",
             });
           }}
-          href="/form"
         >
           Another Class
         </Button>
