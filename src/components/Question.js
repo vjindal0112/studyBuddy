@@ -95,7 +95,6 @@ const Question = ({
         {number ? (
           <>
             <Select onChange={(e) => {
-              console.log(e.target.value);
               setSelectVal(e.target.value);
             }}>
               <option>US</option>

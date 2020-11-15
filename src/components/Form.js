@@ -109,7 +109,6 @@ const Form = ({ history }) => {
       render={({ state, fullpageApi }) => {
         return (
           <>
-            {console.log(data)}
             <ReactFullpage.Wrapper>
               <SaveBanner animate={animate}>
                 Saved your class, fill out these 3 fields for another
