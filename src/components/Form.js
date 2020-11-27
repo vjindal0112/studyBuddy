@@ -82,7 +82,7 @@ const Form = ({ history }) => {
         let selected = data[keys[i]];
         let found = false;
         for (var i = 0; i < options.length; ++i) {
-          if (selected == options[i]['value']) {
+          if (selected == options[i]["value"]) {
             found = true;
           }
         }
@@ -129,6 +129,11 @@ const Form = ({ history }) => {
           return false;
         }
       }
+    }
+
+    if (data["number"].replace(/[^\d]/g, "").length < 10) {
+      alert("Please enter a valid phone number");
+      return false;
     }
 
     var formData = new FormData();
