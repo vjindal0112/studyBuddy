@@ -75,11 +75,11 @@ const BulletPoints = styled.div`
 `;
 
 export default function Home() {
-  const [userCount, setUserCount] = useState(6500);
+  const [userCount, setUserCount] = useState(0);
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbxP3gykUXOcNunlc7uvzvwPiBcL1h44XzxSjsn3Vvu1vW0XB7U/exec"
+      "https://script.google.com/macros/s/AKfycbzBZNMynJ2zrWVfh4vmHoJWnPbPryE0mEmi5QSNceJh5ucSsh0z/exec"
     )
       .then((snapshot) => snapshot.json())
       .then((num) => setUserCount(parseInt(num.number)));
@@ -89,7 +89,7 @@ export default function Home() {
     <>
       <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
-        <Banner>The form is closed!</Banner>
+        {/* <Banner>The form is closed!</Banner> */}
         <Logo src={logo} />
         <Heading>UMich StudyBuddies</Heading>
         <div
@@ -104,20 +104,20 @@ export default function Home() {
         >
           <div>Join</div>
           <UserCount>
-            <CountUp start={6500} end={userCount} />
+            <CountUp start={6700} end={userCount ? userCount + 7185 : 6700} />
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button
+        <Button href="/form"
           onClick={() => {
             ReactGA.event({
               category: "Navigation",
               action: "Click",
-              label: "Closed",
+              label: "Find Your Buddy",
             });
           }}
         >
-          Closed
+          Find Your Buddy
         </Button>
       </div>
       <Section padding="20px" backgroundColor="#fefefe">
@@ -130,12 +130,12 @@ export default function Home() {
           <br />
           <Flex>
             <BulletPoints>2</BulletPoints>
-            <BulletText>Get your buddies Oct. 18</BulletText>
+            <BulletText>Get your buddies Dec. 6</BulletText>
           </Flex>
           <br />
           <Flex>
             <BulletPoints>3</BulletPoints>
-            <BulletText>Make your group chat!</BulletText>
+            <BulletText>Chat in your group chat!</BulletText>
           </Flex>
         </OuterFlex>
       </Section>
@@ -179,8 +179,8 @@ export default function Home() {
             <b>When is the last day I can fill this out?</b>
           </p>
           <p>
-            The form will close on October 16th at noon because we want to get
-            you your StudyBuddies by October 18th.
+            The form will close on December 5th at noon because we want to get
+            you your StudyBuddies by December 6th.
           </p>
           <p>
             <b>Where can I find more information?</b>
