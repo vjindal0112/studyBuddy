@@ -108,7 +108,8 @@ export default function Home() {
           </UserCount>
           <div>Wolverines</div>
         </div>
-        <Button href="/form"
+        <Button
+          href="/form"
           onClick={() => {
             ReactGA.event({
               category: "Navigation",
@@ -173,7 +174,7 @@ export default function Home() {
           </p>
           <p>
             Yes! You’re encouraged to. We’d love to give you a group of
-            studybuddies for every class you’re taking this quarter.
+            studybuddies for every class you’re taking this semester.
           </p>
           <p>
             <b>When is the last day I can fill this out?</b>
@@ -190,6 +191,14 @@ export default function Home() {
             <a href="https://medium.com/@vjindal0112/why-we-made-studybuddies-493beda5d8f7">
               Why We Made StudyBuddies
             </a>
+          </p>
+          <p>
+            <b>I have another question</b>
+          </p>
+          <p>
+            Shoot over an email to{" "}
+            <a href="mailto:team@studybuddies.ai">team@studybuddies.ai</a>. We'd
+            be happy to answer any questions
           </p>
         </TextDiv>
       </Section>
