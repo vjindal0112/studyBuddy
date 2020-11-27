@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import logo from "../StudyBuddyLogo.png";
 import Header from "../components/Header";
 import CountUp from "react-countup";
 import { Button, UserCount, Banner } from "../components/styles"; // styles used for shared styles
@@ -90,7 +89,7 @@ export default function Home() {
       <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
         {/* <Banner>The form is closed!</Banner> */}
-        <Logo src={logo} />
+        <Logo src="/StudyBuddyLogo.png" />
         <Heading>UMich StudyBuddies</Heading>
         <div
           style={{
