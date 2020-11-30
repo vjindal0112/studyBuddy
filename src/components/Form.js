@@ -14,6 +14,10 @@ const Form = ({ history }) => {
     gender: "",
     class: "",
     interest: "2",
+    ambition: "",
+    "binge-study": "",
+    "work-ethic": "",
+    "study-sociability": "",
     "student-org": "",
     email: "",
     number: "",
@@ -41,7 +45,7 @@ const Form = ({ history }) => {
     setAnimate(false);
   }
 
-  function pushToSheets(anotherClass) {
+  function checkEmail() {
     const spamWords = [
       "a",
       "test",
@@ -59,22 +63,51 @@ const Form = ({ history }) => {
     ];
     const specialChars = ["!", "*", "&", "^", "$", "#"];
 
+    if (!data["email"].toLowerCase().includes("@umich.edu")) {
+      alert("Please enter your @umich.edu email");
+      return false;
+    }
+
+    let tempEmail = data["email"].toLowerCase().trim();
+    let before = tempEmail.substr(0, tempEmail.indexOf("@"));
+
+    let spam = false;
+    spamWords.map((word, index) => {
+      if (before == word) {
+        spam = true;
+      }
+    });
+
+    specialChars.map((char, index) => {
+      if (tempEmail.includes(char)) {
+        spam = true;
+      }
+    });
+
+    if (tempEmail.split("@").length - 1 > 1) {
+      spam = true;
+    }
+    if (
+      !(tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu") ||
+      before.includes(" ") ||
+      spam ||
+      before.length <= 1
+    ) {
+      alert("Please enter a valid email");
+      return false;
+    }
+    return true;
+  }
+
+  function pushToSheets(anotherClass) {
+    if (!checkEmail()) {
+      return false;
+    }
+
     // UNCOMMENT to check for all filled in
     for (var i = 0; i < keys.length; i++) {
-      if (
-        !data[keys[i]] &&
-        !(
-          keys[i] == "ambition" ||
-          keys[i] == "binge-study" ||
-          keys[i] == "study-sociability" ||
-          keys[i] == "work-ethic"
-        )
-      ) {
+      if (!data[keys[i]]) {
         alert("Please fill in all fields");
-        return false;
-      }
-      if (!data["email"].toLowerCase().includes("@umich.edu")) {
-        alert("Please enter your @umich.edu email");
         return false;
       }
 
@@ -82,6 +115,7 @@ const Form = ({ history }) => {
         let selected = data[keys[i]];
         let found = false;
         for (var i = 0; i < options.length; ++i) {
+          // iterate through all classes
           if (selected == options[i]["value"]) {
             found = true;
           }
@@ -96,43 +130,15 @@ const Form = ({ history }) => {
           return false;
         }
       }
-
-      if (keys[i] == "email") {
-        let tempEmail = data[keys[i]].trim();
-        let before = tempEmail.substr(0, tempEmail.indexOf("@"));
-
-        let spam = false;
-        spamWords.map((word, index) => {
-          if (before == word) {
-            spam = true;
-          }
-        });
-
-        specialChars.map((char, index) => {
-          if (tempEmail.includes(char)) {
-            spam = true;
-          }
-        });
-
-        if (tempEmail.split("@").length - 1 > 1) {
-          spam = true;
-        }
-        if (
-          !(
-            tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu"
-          ) ||
-          before.includes(" ") ||
-          spam ||
-          before.length <= 1
-        ) {
-          alert("Please enter a valid email");
-          return false;
-        }
-      }
     }
 
     if (data["number"].replace(/[^\d]/g, "").length < 10) {
       alert("Please enter a valid phone number");
+      window.scrollTo({
+        top: window.innerHeight * 11,
+        left: 0,
+        behavior: "smooth",
+      });
       return false;
     }
 
@@ -185,7 +191,7 @@ const Form = ({ history }) => {
           <>
             <ReactFullpage.Wrapper>
               <SaveBanner animate={animate}>
-                Saved your class, fill out these 2 fields for another
+                Saved your class, fill out these 3 fields for another
               </SaveBanner>
               <Privacy
                 message="Once you fill this out, we'll match you with 3 buddies in your class based on the similarity of your responses"
@@ -239,6 +245,41 @@ const Form = ({ history }) => {
                 moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
                 onChange={onChangeListener}
                 initial={data[keys[4]]}
+              />
+
+              <SelectBar
+                title="What grade would you be happy with in this class?"
+                label="Grade"
+                keyName={keys[5]}
+                choices={grades}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[5]]}
+                reset={reset}
+              />
+
+              <Slider
+                title="I usually binge study a couple days before a midterm"
+                keyName={keys[6]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[6]]}
+              />
+
+              <Slider
+                title="I typically study more than other students in my class"
+                keyName={keys[7]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[7]]}
+              />
+
+              <Slider
+                title="I frequently do my homework with other students"
+                keyName={keys[8]}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[8]]}
               />
 
               <SelectBar
