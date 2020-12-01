@@ -47,11 +47,11 @@ const Feedback = () => {
   return (
     <>
       <Header title="Feedback" />
-      <div className="App" style={{padding: '4px'}}>
-        <h1>Thanks for the feedback!</h1>
+      <div className="App" style={{ padding: "4px" }}>
+        <h1>You've been added to the raffle!</h1>
         <Texth4>
-          We got your response and we will use it to make StudyBuddies even
-          better for next semester
+          We'll use your feedback to adjust and improve the Studybuddies matches
+          for next semester. <br /> See you then!
         </Texth4>
       </div>
     </>
