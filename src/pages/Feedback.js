@@ -5,9 +5,20 @@ import { useLocation } from "react-router-dom";
 
 const Texth4 = styled.h4`
   max-width: 50%;
+  font-size: 20px;
   @media (max-width: 768px) {
     max-width: 90%;
     font-size: 20px;
+  }
+`;
+
+const Texth1 = styled.h4`
+  max-width: 50%;
+  font-size: 40px;
+  @media (max-width: 768px) {
+    max-width: 90%;
+    font-size: 32px;
+    font-weight: 300;
   }
 `;
 
@@ -48,7 +59,7 @@ const Feedback = () => {
     <>
       <Header title="Feedback" />
       <div className="App" style={{ padding: "4px" }}>
-        <h1>You've been added to the raffle!</h1>
+        <Texth1>You've been added to the raffle!</Texth1>
         <Texth4>
           We'll use your feedback to adjust and improve the Studybuddies matches
           for next semester. <br /> See you then!
