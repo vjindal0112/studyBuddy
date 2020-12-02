@@ -12,15 +12,6 @@ const Texth4 = styled.h4`
   }
 `;
 
-const Texth3 = styled.h4`
-  max-width: 50%;
-  font-size: 18px;
-  @media (max-width: 768px) {
-    max-width: 90%;
-    font-size: 18px;
-  }
-`;
-
 const Texth1 = styled.h4`
   max-width: 50%;
   font-size: 40px;
@@ -79,7 +70,7 @@ const Feedback = () => {
           We'll use your feedback to improve the Studybuddies matches for next
           semester. <br /> <br />
         </Texth4>
-        <Texth3>
+        <Texth4>
           Check out our{" "}
           <a
             href="http://studybuddies.ai/raffle"
@@ -88,7 +79,7 @@ const Feedback = () => {
             raffle page
           </a>{" "}
           to see who wins!
-        </Texth3>
+        </Texth4>
       </div>
     </>
   );
