@@ -73,7 +73,7 @@ const Feedback = () => {
         <Texth4>
           Check out our{" "}
           <a
-            href="http://studybuddies.ai/raffle"
+            href="https://umichstudybuddies.com/raffle"
             style={{ color: "#FFF", textDecoration: "underline" }}
           >
             raffle page
