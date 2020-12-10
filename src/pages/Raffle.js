@@ -60,11 +60,10 @@ const Raffle = () => {
       <Header title="Raffle" />
       <div className="App" style={{ padding: "4px" }}>
         <br /> <br />
-        <h1>Winner: ...</h1>
+        <h1>Winner: Nathaniel Hodgson!</h1>
         <br /> <br />
         <Texth4>
-          The winner of the <b> $30 Amazon Gift Card </b> will be announced on{" "}
-          <b> Wednesday, December 9!</b>
+          Thank you to everyone who gave feedback! See you next semester :){" "}
         </Texth4>
       </div>
     </>
