@@ -63,7 +63,7 @@ const Raffle = () => {
         <h1>Winner: Nathaniel Hodgson!</h1>
         <br /> <br />
         <Texth4>
-          Congratulations! Good luck on finals
+          Thank you to everyone who gave feedback! See you next semester :){" "}
         </Texth4>
       </div>
     </>
