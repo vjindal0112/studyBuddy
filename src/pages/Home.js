@@ -117,7 +117,7 @@ export default function Home() {
             });
           }}
         >
-          Find your buddies
+          Find a buddy
         </Button>
       </div>
       <Section padding="20px" backgroundColor="#fefefe">
