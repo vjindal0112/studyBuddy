@@ -23,8 +23,8 @@ export const Button = styled.a`
 
   transition: all 0.5s;
   &:hover {
-    border: 3px solid #CFAB00;
-    background-color: #CFAB00;
+    border: 3px solid #cfab00;
+    background-color: #cfab00;
     color: #fafafa;
   }
 `;
@@ -68,8 +68,8 @@ export const QuestionButton = styled.button`
 
   transition: all 0.2s;
   &:hover {
-    border: 3px solid #CFAB00;
-    background-color: #CFAB00;
+    border: 3px solid #cfab00;
+    background-color: #cfab00;
     color: #fafafa;
   }
 `;
@@ -141,5 +141,4 @@ export const Select = styled.select`
   padding: 4px 8px;
   margin: 8px;
   margin-right: 12px;
-
-`
+`;
