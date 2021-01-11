@@ -126,18 +126,6 @@ const Form = ({ history }) => {
       }
     }
 
-    {
-      /*if (data["number"].replace(/[^\d]/g, "").length < 10) {
-      alert("Please enter a valid phone number");
-      window.scrollTo({
-        top: window.innerHeight * 11,
-        left: 0,
-        behavior: "smooth",
-      });
-      return false;
-    }*/
-    }
-
     var formData = new FormData();
     for (var key in data) {
       if (key == "email") {
@@ -271,7 +259,7 @@ const Form = ({ history }) => {
               />*/}
 
               <SelectBar
-                title="Which type of student org do you spend the most time on?"
+                title="Which type of student org are you most involved in?"
                 label="Select affiliation"
                 keyName={keys[6]}
                 choices={orgs}
