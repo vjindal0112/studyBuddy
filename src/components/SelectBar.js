@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Select from "react-select";
 import { QuestionButton } from "./styles";
-// import ListItem from "./ListItem";
 
 const Wrapper = styled.div`
-  margin: 20px auto;
+  margin: 0 auto;
   width: 40%;
   color: #fafafa !important;
 
@@ -18,14 +16,17 @@ const Input = styled.input`
   font-size: 16px;
   padding: 12px;
   background-color: #fff;
-  width: 40%;
+  width: 100%;
+  border-radius: 4px;
   display: flex;
   margin: 0 auto;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); */
+  box-shadow: none;
+  border: none;
   outline: none;
-  :focus {
-    border-radius: 0px;
-  }
+  /* :focus {
+    border-radius: 4px;
+  } */
   @media (max-width: 768px) {
     width: 80%;
     padding: 12px;
@@ -43,7 +44,7 @@ const QuestionWrapper = styled.div`
 const ListItem = styled.div`
   border: 1px solid #ddd;
   border-top-width: 0;
-  background-color: #fff;
+  background-color: ${props => props.selected ? "#efefff" : "#fff"};
   color: #333;
   padding: 20px;
   /* width: 40%; */
@@ -57,9 +58,9 @@ const ListItem = styled.div`
   :hover {
     background-color: #efefff;
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     width: 80%;
-  }
+  } */
 `;
 
 const customStyles = {
@@ -76,13 +77,23 @@ const ListItemContainer = styled.div`
   transform: translateX(-50%);
   left: 50%;
   width: 40%;
+  padding-top: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const InnerListItemContainer = styled.div`
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
   overflow-y: auto;
   max-height: 30vh;
+  border-radius: 4px;
+
+  @media (max-width: 768px) {
+    width: 72%;
+  }
 `;
 
 const SelectBar = ({
@@ -96,7 +107,6 @@ const SelectBar = ({
   reset,
 }) => {
   const [focused, setFocused] = useState(false);
-  const [listFocused, setListFocused] = useState(false);
 
   useEffect(() => {}, [keyName, choices, initial, reset]);
 
@@ -106,13 +116,29 @@ const SelectBar = ({
         <p>{title}</p>
       </QuestionWrapper>
       <Wrapper>
-        {console.log(initial)}
+        {focused ? console.log(initial) : null}
         <Input
           type="input"
           placeholder={label}
           onChange={(e) => onChange(keyName, e.target.value)}
           value={initial}
           onFocus={(e) => setFocused(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              if (focused) {
+                let temp = choices.filter((obj) => {
+                  return obj.value
+                    .toLowerCase()
+                    .includes(initial.toLowerCase());
+                });
+                if (temp.length >= 1) {
+                  onChange(keyName, temp[0].value);
+                  setFocused(false);
+                }
+              }
+              moveSectionDown();
+            }
+          }}
           // onBlur={(e) => !listFocused ? setFocused(false) : null}
           // onClick={() => {
           //   ReactGA.event({
@@ -126,18 +152,10 @@ const SelectBar = ({
         />
 
         <ListItemContainer>
-          <InnerListItemContainer
-            onMouseOver={(e) => setListFocused(true)}
-            onMouseOut={(e) => setListFocused(false)}
-          >
+          <InnerListItemContainer>
             {focused
               ? choices
                   .filter((obj) => {
-                    {
-                      /* if (obj.value == initial) {
-                      setListFocused(false);
-                    } */
-                    }
                     return obj.value
                       .toLowerCase()
                       .includes(initial.toLowerCase());
@@ -152,6 +170,7 @@ const SelectBar = ({
                             onChange(keyName, obj.value);
                             setFocused(false);
                           }}
+                          selected={index == 0 ? true : false}
                         >
                           {obj.value}
                         </ListItem>
