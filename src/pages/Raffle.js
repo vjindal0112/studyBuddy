@@ -23,38 +23,6 @@ const Texth1 = styled.h4`
 `;
 
 const Raffle = () => {
-  let url = useLocation();
-
-  useEffect(() => {
-    pushEmailToSheets();
-  });
-
-  function pushEmailToSheets() {
-    var formData = new FormData();
-
-    if (url.search != "") {
-      formData.append(
-        "uniqname",
-        url.search
-          .substr(1, url.search.indexOf("&") - 1)
-          .toLowerCase()
-          .trim()
-      );
-      formData.append(
-        "vote",
-        url.search
-          .substr(url.search.indexOf("&") + 1)
-          .toLowerCase()
-          .trim()
-      );
-    }
-    fetch(
-      "https://script.google.com/macros/s/AKfycbwl6I3TSSgQNrPMf4zc4dvsDPwoXfCQy2TecImRxuvb7QA-NzuT/exec",
-      { method: "POST", body: formData }
-    );
-    return true;
-  }
-
   return (
     <>
       <Header title="Raffle" />

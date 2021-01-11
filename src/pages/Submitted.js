@@ -18,16 +18,15 @@ const Submitted = () => {
       <div className="App">
         <h1>Congrats, and good luck!</h1>
         <Texth4>
-          You will hear back from us via email and phone on December 6th with your study
-          buddies!
+          You will hear back from us January 28th with your study buddies!
         </Texth4>
-        <Button href="/form"
+        <Button
+          href="/form"
           onClick={() => {
             ReactGA.event({
               category: "Navigation",
               action: "Click",
               label: "Another Class",
-
             });
           }}
         >
