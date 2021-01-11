@@ -22,12 +22,6 @@ const Texth1 = styled.h4`
   }
 `;
 
-const Link = styled.link`
-  color: white;
-  text-decoration: underline;
-  }
-`;
-
 const Feedback = () => {
   let url = useLocation();
 

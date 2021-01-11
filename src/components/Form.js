@@ -14,7 +14,7 @@ const Form = ({ history }) => {
     gender: "",
     class: "",
     interest: "2",
-    "binge-study": "",
+    "binge-study": "2",
     "student-org": "",
     email: "",
   });
@@ -151,7 +151,7 @@ const Form = ({ history }) => {
     setAnimate(true);
     setTimeout(bannerUp, 4000);
     fetch(
-      "https://script.google.com/macros/s/AKfycbzUMEfcglmVi052I0REVA5uVL-q3BB68--TtaKff-98aMTZbMPS/exec",
+      "https://script.google.com/macros/s/AKfycbxDPB1OIDf5QbPdtu-p3H7SYRcaxP_iOhYsxS2z8skGAjg62Q82BgcgKw/exec",
       { method: "POST", body: formData }
     );
     if (anotherClass) {
@@ -328,18 +328,6 @@ const orgs = [
   },
   { value: "Other", label: "Other" },
   { value: "None yet!", label: "None yet!" },
-];
-
-const grades = [
-  { value: " A+", label: " A+" },
-  { value: " A", label: " A" },
-  { value: " A-", label: " A-" },
-  { value: " B+", label: " B+" },
-  { value: " B", label: " B" },
-  { value: " B-", label: " B-" },
-  { value: " C+", label: " C+" },
-  { value: " C", label: " C" },
-  { value: "just pass", label: "just pass" },
 ];
 
 const year = [

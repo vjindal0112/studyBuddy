@@ -78,7 +78,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzBZNMynJ2zrWVfh4vmHoJWnPbPryE0mEmi5QSNceJh5ucSsh0z/exec"
+      "https://script.google.com/macros/s/AKfycbxDPB1OIDf5QbPdtu-p3H7SYRcaxP_iOhYsxS2z8skGAjg62Q82BgcgKw/exec"
     )
       .then((snapshot) => snapshot.json())
       .then((num) => setUserCount(parseInt(num.number)));

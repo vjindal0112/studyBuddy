@@ -63,15 +63,6 @@ const ListItem = styled.div`
   } */
 `;
 
-const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    borderBottom: "1px dotted pink",
-    color: "black",
-    padding: 20,
-  }),
-};
-
 const ListItemContainer = styled.div`
   position: absolute;
   transform: translateX(-50%);
@@ -139,16 +130,6 @@ const SelectBar = ({
               moveSectionDown();
             }
           }}
-          // onBlur={(e) => !listFocused ? setFocused(false) : null}
-          // onClick={() => {
-          //   ReactGA.event({
-          //     category: "Search",
-          //     action: "Click",
-          //   });
-          //   // amplitude.getInstance().logEvent("Search", {
-          //   //   action: "Click",
-          //   // });
-          // }}
         />
 
         <ListItemContainer>
