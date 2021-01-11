@@ -16,7 +16,7 @@ const Submitted = () => {
     <>
       <Header title="Submitted" />
       <div className="App">
-        <h1>Congrats, and good luck!</h1>
+        <h1>Good luck this semester!</h1>
         <Texth4>
           You will hear back from us January 28th with your study buddies!
         </Texth4>
