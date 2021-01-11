@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { collegeDark, collegeLight } from "../constants";
+import { collegeLight } from "../constants";
 import { QuestionButton, Input, Select } from "./styles";
 import ReactGA from "react-ga";
 

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../components/Header";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 
 const Texth4 = styled.h4`
   max-width: 50%;

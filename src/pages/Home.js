@@ -78,7 +78,7 @@ export default function Home() {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbzBZNMynJ2zrWVfh4vmHoJWnPbPryE0mEmi5QSNceJh5ucSsh0z/exec"
+      "https://script.google.com/macros/s/AKfycbxDPB1OIDf5QbPdtu-p3H7SYRcaxP_iOhYsxS2z8skGAjg62Q82BgcgKw/exec"
     )
       .then((snapshot) => snapshot.json())
       .then((num) => setUserCount(parseInt(num.number)));
@@ -103,7 +103,7 @@ export default function Home() {
         >
           <div>Join</div>
           <UserCount>
-            <CountUp start={6700} end={userCount ? userCount + 7185 : 6700} />
+            <CountUp start={6700} end={userCount ? userCount + 7210 : 6700} />
           </UserCount>
           <div>Wolverines</div>
         </div>
@@ -113,11 +113,11 @@ export default function Home() {
             ReactGA.event({
               category: "Navigation",
               action: "Click",
-              label: "Open",
+              label: "Find your Buddies",
             });
           }}
         >
-          Find a buddy
+          Find your Buddies
         </Button>
       </div>
       <Section padding="20px" backgroundColor="#fefefe">
