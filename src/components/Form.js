@@ -231,17 +231,6 @@ const Form = ({ history }) => {
                 initial={data[keys[4]]}
               />
 
-              {/*<SelectBar
-                title="What grade would you be happy with in this class?"
-                label="Grade"
-                keyName={keys[5]}
-                choices={grades}
-                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-                onChange={onChangeListener}
-                initial={data[keys[5]]}
-                reset={reset}
-              />*/}
-
               <Slider
                 title="I usually binge study a couple of days before a midterm"
                 keyName={keys[5]}
@@ -249,14 +238,6 @@ const Form = ({ history }) => {
                 onChange={onChangeListener}
                 initial={data[keys[5]]}
               />
-
-              {/*<Slider
-                title="I frequently do my homework with other students"
-                keyName={keys[8]}
-                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-                onChange={onChangeListener}
-                initial={data[keys[8]]}
-              />*/}
 
               <SelectBar
                 title="Which type of student org are you most involved in?"
@@ -267,20 +248,6 @@ const Form = ({ history }) => {
                 onChange={onChangeListener}
                 initial={data[keys[6]]}
               />
-
-              {/*<Question
-                title="What's your phone number?"
-                number={true}
-                keyName={keys[11]}
-                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-                onChange={onChangeListener}
-                initial={data[keys[11]]}
-              />*/}
-
-              {/*<Privacy
-                message="Just a heads up, we will be sharing your club affiliations with your study buddies"
-                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
-              />*/}
 
               <Question
                 title="What's your UMich email?"
