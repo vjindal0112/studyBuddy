@@ -19,7 +19,6 @@ const Form = ({ history }) => {
     email: "",
   });
 
-  const [reset, setReset] = useState(false);
   const [animate, setAnimate] = useState(false); // for Save Confirmation Banner
 
   const keys = [
@@ -108,9 +107,9 @@ const Form = ({ history }) => {
       if (keys[i] == "class") {
         let selected = data[keys[i]];
         let found = false;
-        for (var i = 0; i < options.length; ++i) {
+        for (var k = 0; k < options.length; ++k) {
           // iterate through all classes
-          if (selected == options[i]["value"]) {
+          if (selected == options[k]["value"]) {
             found = true;
           }
         }
@@ -135,14 +134,13 @@ const Form = ({ history }) => {
       }
     }
     setData({ ...data, class: "", interest: "2", ambition: "" });
-    setReset((reset) => !reset);
-    setAnimate(true);
-    setTimeout(bannerUp, 4000);
     fetch(
       "https://script.google.com/macros/s/AKfycbxDPB1OIDf5QbPdtu-p3H7SYRcaxP_iOhYsxS2z8skGAjg62Q82BgcgKw/exec",
       { method: "POST", body: formData }
     );
     if (anotherClass) {
+      setAnimate(true);
+      setTimeout(bannerUp, 4000);
       window.scrollTo({
         top: window.innerHeight * 4,
         left: 0,
@@ -220,7 +218,6 @@ const Form = ({ history }) => {
                 moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
                 onChange={onChangeListener}
                 initial={data[keys[3]]}
-                reset={reset}
               />
 
               <Slider

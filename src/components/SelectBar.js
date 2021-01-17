@@ -95,11 +95,10 @@ const SelectBar = ({
   moveSectionDown,
   onChange,
   initial,
-  reset,
 }) => {
   const [focused, setFocused] = useState(false);
 
-  useEffect(() => {}, [keyName, choices, initial, reset]);
+  useEffect(() => {}, [keyName, choices, initial]);
 
   return (
     <div className="section">
@@ -107,7 +106,6 @@ const SelectBar = ({
         <p>{title}</p>
       </QuestionWrapper>
       <Wrapper>
-        {focused ? console.log(initial) : null}
         <Input
           type="input"
           placeholder={label}

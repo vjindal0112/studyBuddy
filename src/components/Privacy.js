@@ -42,7 +42,7 @@ const Privacy = ({ message, moveSectionDown, buttonMessage }) => {
       </QuestionWrapper>
 
       <QuestionButton
-        style={{ "padding-right": "14px", "padding-left": "14px" }}
+        style={{ "paddingRight": "14px", "paddingLeft": "14px" }}
         onClick={() => {
           if (buttonMessage) {
               ReactGA.event({
