@@ -3855,6 +3855,7 @@ const options = [
   { value: "NERS 442 - Kochunas", label: "NERS 442 - Kochunas" },
   { value: "NERS 472 - Gilgenbach", label: "NERS 472 - Gilgenbach" },
   { value: "NERS 492 - Kuranz", label: "NERS 492 - Kuranz" },
+  { value: "NERS 551", label: "NERS 551" },
   { value: "NURS 194 - Charania, Doman", label: "NURS 194 - Charania, Doman" },
   { value: "NURS 210 - Petrosyan", label: "NURS 210 - Petrosyan" },
   { value: "NURS 218 - Peitzmeier", label: "NURS 218 - Peitzmeier" },
