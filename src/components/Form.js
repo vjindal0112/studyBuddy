@@ -3118,7 +3118,6 @@ const options = [
   { value: "ELI 393 - Kato", label: "ELI 393 - Kato" },
   { value: "ENGLISH 320 - Balachander", label: "ENGLISH 320 - Balachander" },
   { value: "ENGLISH 124 - Hagler", label: "ENGLISH 124 - Hagler" },
-  { value: "EECS 281", label: "EECS 281" },
   { value: "ENGLISH 125 - Parra Garcia", label: "ENGLISH 125 - Parra Garcia" },
   { value: "ENGLISH 125 - Williams", label: "ENGLISH 125 - Williams" },
   { value: "ENGLISH 125 - Tunstall", label: "ENGLISH 125 - Tunstall" },
