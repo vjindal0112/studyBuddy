@@ -88,7 +88,7 @@ export default function Home() {
     <>
       <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
-        {/*<Banner>The form is closed!</Banner>*/}
+        <Banner>The form is closed!</Banner>
         <Logo src="/StudyBuddyLogo.png" />
         <Heading>UMich StudyBuddies</Heading>
         <div
@@ -108,7 +108,6 @@ export default function Home() {
           <div>Wolverines</div>
         </div>
         <Button
-          href="/form"
           onClick={() => {
             ReactGA.event({
               category: "Navigation",
@@ -117,7 +116,7 @@ export default function Home() {
             });
           }}
         >
-          Find your Buddies
+          Closed
         </Button>
       </div>
       <Section padding="20px" backgroundColor="#fefefe">
