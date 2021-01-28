@@ -294,6 +294,7 @@ const year = [
   { value: "Junior", label: "Junior" },
   { value: "Senior", label: "Senior" },
   { value: "5th Year", label: "5th Year" },
+  { value: "Graduate", label: "Graduate"}
 ];
 
 const gender = [
