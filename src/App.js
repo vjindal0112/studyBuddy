@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import ReactGA from "react-ga";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 const trackingId = "UA-176116817-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);

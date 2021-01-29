@@ -135,7 +135,7 @@ const Form = ({ history }) => {
     }
     setData({ ...data, class: "", interest: "2", ambition: "" });
     fetch(
-      "https://script.google.com/macros/s/AKfycbxDPB1OIDf5QbPdtu-p3H7SYRcaxP_iOhYsxS2z8skGAjg62Q82BgcgKw/exec",
+      "https://script.google.com/macros/s/AKfycbyMJ9lO7HWmfgXEvW52HOMYkCGk5w5ZMWS4WZk80cYFO3vXggZ5_0iR/exec",
       { method: "POST", body: formData }
     );
     if (anotherClass) {
@@ -168,6 +168,7 @@ const Form = ({ history }) => {
       scrollingSpeed={1000} /* Options here */
       autoScrolling={false}
       fitToSection={false}
+      licenseKey={"C30CB3E3-6F854137-B837B6F5-B56F03A9"}
       render={({ state, fullpageApi }) => {
         return (
           <>
@@ -294,6 +295,11 @@ const year = [
   { value: "Junior", label: "Junior" },
   { value: "Senior", label: "Senior" },
   { value: "5th Year", label: "5th Year" },
+  { value: "First Year Grad", label: "First Year Grad" },
+  { value: "Second Year Grad", label: "Second Year Grad" },
+  { value: "Third Year Grad", label: "Third Year Grad" },
+  { value: "Fourth Year Grad", label: "Fourth Year Grad" },
+  { value: "Fifth Year Grad +", label: "Fourth Year Grad +" },
 ];
 
 const gender = [
