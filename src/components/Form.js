@@ -17,6 +17,7 @@ const Form = ({ history }) => {
     "binge-study": "2",
     "student-org": "",
     email: "",
+    "time-zone": "",
   });
 
   const [animate, setAnimate] = useState(false); // for Save Confirmation Banner
@@ -30,6 +31,7 @@ const Form = ({ history }) => {
     "binge-study",
     "student-org",
     "email",
+    "time-zone",
   ];
 
   function bannerUp() {
@@ -247,6 +249,16 @@ const Form = ({ history }) => {
                 initial={data[keys[6]]}
               />
 
+              <SelectBar
+                title="When it is 12 pm (midnight) in Ann Arbor, what time is it where you are?"
+                label="Time"
+                keyName={keys[8]}
+                choices={timeZones}
+                moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
+                onChange={onChangeListener}
+                initial={data[keys[8]]}
+              />
+
               <Privacy
                 message="Just a heads up, we will be sharing your email and any similarities you have with your buddies"
                 moveSectionDown={fullpageApi && fullpageApi.moveSectionDown}
@@ -299,6 +311,33 @@ const year = [
   { value: "Second Year Grad", label: "Second Year Grad" },
   { value: "Third Year Grad", label: "Third Year Grad" },
   { value: "Fourth Year Grad +", label: "Fourth Year Grad +" },
+];
+
+const timeZones = [
+  { value: "Midnight", label: "Midnight" },
+  { value: "1 am", label: "1 am" },
+  { value: "2 am", label: "2 am" },
+  { value: "3 am", label: "3 am" },
+  { value: "4 am", label: "4 am" },
+  { value: "5 am", label: "5 am" },
+  { value: "6 am", label: "6 am" },
+  { value: "7 am", label: "7 am" },
+  { value: "8 am", label: "8 am" },
+  { value: "9 am", label: "9 am" },
+  { value: "10 am", label: "10 am" },
+  { value: "11 am", label: "11 am" },
+  { value: "noon", label: "noon" },
+  { value: "1 pm", label: "1 pm" },
+  { value: "2 pm", label: "2 pm" },
+  { value: "3 pm", label: "3 pm" },
+  { value: "4 pm", label: "4 pm" },
+  { value: "5 pm", label: "5 pm" },
+  { value: "6 pm", label: "6 pm" },
+  { value: "7 pm", label: "7 pm" },
+  { value: "8 pm", label: "8 pm" },
+  { value: "9 pm", label: "9 pm" },
+  { value: "10 pm", label: "10 pm" },
+  { value: "11 pm", label: "11 pm" },
 ];
 
 const gender = [
