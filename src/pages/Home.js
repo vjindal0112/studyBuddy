@@ -30,7 +30,7 @@ const Flex = styled.div`
 `;
 
 const OuterFlex = styled.div`
-  max-width: 30em;
+  max-width: 26em;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -42,7 +42,7 @@ const OuterFlex = styled.div`
 
 const BulletText = styled.div`
   margin-left: 20px;
-  font-size: 24px;
+  font-size: 18px;
   color: black;
   display: flex;
   text-align: left;
@@ -88,7 +88,7 @@ export default function Home() {
     <>
       <Header />
       <div className="App" style={{ height: "88vh", minHeight: "88vh" }}>
-        <Banner>The form is closed!</Banner>
+        {/* <Banner>The form is closed!</Banner> */}
         <Logo src="/StudyBuddyLogo.png" />
         <Heading>UMich StudyBuddies</Heading>
         <div
